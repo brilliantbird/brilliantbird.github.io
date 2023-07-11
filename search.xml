@@ -18,4 +18,17 @@
 <p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>readme</title>
+    <url>/2023/07/11/readme/</url>
+    <content><![CDATA[<p>1.学习Linux。已经学完目录结构，基础的命令指令，相对路径和绝对路径，主机状态监控，ip地址和主机名，端口，环境变量，压缩解压，在Ubuntu和CentOS上安装部署MySQL软件。  </p>
+<p>2.完成追色块任务  </p>
+<p>3.和伟晨一起换了一次电机电调</p>
+<p>4.学习做线，完成人生第一次做线</p>
+<p>5.写去年电赛题目飞控代码，键盘输入+	识别色块</p>
+]]></content>
+      <tags>
+        <tag>note</tag>
+      </tags>
+  </entry>
 </search>
