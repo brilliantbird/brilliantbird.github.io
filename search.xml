@@ -31,4 +31,186 @@
         <tag>note</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Markdown</title>
+    <url>/2023/07/14/Markdown/</url>
+    <content><![CDATA[<h1 id="一、Markdown简介"><a href="#一、Markdown简介" class="headerlink" title="一、Markdown简介"></a>一、Markdown简介</h1><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
+<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+<p>Markdown 编写的文档后缀为 .md, .markdown。</p>
+<p>Markdown 能被使用来撰写电子书，如：Gitbook。</p>
+<p>当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p>
+<h1 id="二、Markdown标题"><a href="#二、Markdown标题" class="headerlink" title="二、Markdown标题"></a>二、Markdown标题</h1><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。<br><strong>注意：#后面一定要跟着空格，否则语法无效！</strong></p>
+<p>标题内容的后面如果也存在空格和 #，也可以构成标题，且标题的级别以前面 # 的数量为准。</p>
+<p><strong>使用#号标记标题语法格式：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line"></span><br><span class="line">## 二级标题</span><br><span class="line"></span><br><span class="line">### 三级标题</span><br><span class="line"></span><br><span class="line">#### 四级标题</span><br><span class="line"></span><br><span class="line">##### 五级标题</span><br><span class="line"></span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure></div>
+<p>显示效果：<br>[TOC]目录</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h1 id="三、Markdown段落"><a href="#三、Markdown段落" class="headerlink" title="三、Markdown段落"></a>三、Markdown段落</h1><p>Markdown的段落没有特殊的格式，直接编写文字就好，段落的换行号是使用两个以上的空格加回车。</p>
+<h2 id="3-1字体"><a href="#3-1字体" class="headerlink" title="3.1字体"></a>3.1字体</h2><p>Markdown 可以使用以下几种字体：</p>
+<ul>
+<li>用1个星号*或底线_表示斜体</li>
+<li>用2个星号*或底线_表示粗体</li>
+<li>用3个星号*或底线_表示粗斜体</li>
+</ul>
+<p>语法格式：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">*斜体文字*</span><br><span class="line"></span><br><span class="line">_斜体文字_</span><br><span class="line"></span><br><span class="line">**粗体文字**</span><br><span class="line"></span><br><span class="line">__粗体文字__</span><br><span class="line"></span><br><span class="line">***粗斜体文字***</span><br><span class="line"></span><br><span class="line">___粗斜体文字___</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<p><em>斜体文字</em></p>
+<p><em>斜体文字</em></p>
+<p><strong>粗体文字</strong></p>
+<p><strong>粗体文字</strong></p>
+<p><em><strong>粗斜体文字</strong></em></p>
+<p><em><strong>粗斜体文字</strong></em></p>
+<h2 id="3-2分隔线"><a href="#3-2分隔线" class="headerlink" title="3.2分隔线"></a>3.2分隔线</h2><p>可以在一行中用三个以上的星号*、减号-、底线_来建立一个分隔线，行内不能有其他东西，你也可以在星号或减号蹭插入空格。下面这种写法都可以建立分隔线：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">******</span><br><span class="line">- - -</span><br><span class="line">------</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="显示效果："><a href="#显示效果：" class="headerlink" title="显示效果：**** * *******- - -"></a>显示效果：<br>***<br>* * *<br>******<br>- - -</h2><h2 id="3-3删除线"><a href="#3-3删除线" class="headerlink" title="3.3删除线"></a>3.3删除线</h2><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线~~即可。</p>
+<p>语法格式：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~~要显示为要删除线的字~~</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<p><del>要显示为要删除线的字</del></p>
+<h2 id="3-4下划线"><a href="#3-4下划线" class="headerlink" title="3.4下划线"></a>3.4下划线</h2><p>下划线可以通过HTML的标签来实现</p>
+<p>语法格式：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;/u&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<p><u>带下划线文本</u></p>
+<h1 id="四、Markdown列表"><a href="#四、Markdown列表" class="headerlink" title="四、Markdown列表"></a>四、Markdown列表</h1><h2 id="4-1有序列表和无序列表"><a href="#4-1有序列表和无序列表" class="headerlink" title="4.1有序列表和无序列表"></a>4.1有序列表和无序列表</h2><p>Markdown支持有序列表和无序列表，</p>
+<p>无序列表使用星号(*)、加号(+)或者减号(-)作为标记：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<p>有序列表直接在文字有加上1. 2. 3. 来表示，符号和文字之间加上一个空格字符，如：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h2 id="4-2列表嵌套"><a href="#4-2列表嵌套" class="headerlink" title="4.2列表嵌套"></a>4.2列表嵌套</h2><p>列表嵌套只需在子列表的选项前添加四个空格即可：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<ol>
+<li>第一项：<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+</ul>
+</li>
+</ol>
+<h1 id="五、引用"><a href="#五、引用" class="headerlink" title="五、引用"></a>五、引用</h1><p>Markdown区块引用是在段落开头使用&gt;符号，然后后面紧跟一个空格符号：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 区块引用  </span><br><span class="line">&gt; Markdown教程  </span><br><span class="line">&gt; 学的不仅是技术更是梦想</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<blockquote>
+<p>区块引用<br>Markdown教程<br>学的不仅是技术更是梦想  </p>
+</blockquote>
+<p>另外区块是可以嵌套的，一个&gt;符号是最外层，两个符号是第一层嵌套，以此类推：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 最外层</span><br><span class="line">&gt;&gt; 第一层嵌套</span><br><span class="line">&gt;&gt;&gt; 第二层嵌套</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="5-1区块引用中使用列表"><a href="#5-1区块引用中使用列表" class="headerlink" title="5.1区块引用中使用列表"></a>5.1区块引用中使用列表</h2><p>区块中使用列表实例如下：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 区块中使用列表</span><br><span class="line">&gt; 1. 第一项</span><br><span class="line">&gt; 2. 第二项</span><br><span class="line">&gt; + 第一项</span><br><span class="line">&gt; + 第二项</span><br><span class="line">&gt; + 第三项</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<blockquote>
+<p>区块中使用列表</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+</blockquote>
+<h2 id="5-2引用多个段落"><a href="#5-2引用多个段落" class="headerlink" title="5.2引用多个段落"></a>5.2引用多个段落</h2><p>引用可以包含多个段落，引用内段落和普通段落一样，不过在空行前面也要加上小于号。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 这是一个引用段落</span><br><span class="line">&gt;</span><br><span class="line">&gt; 这是另一个引用段落</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<blockquote>
+<p>这是一个引用段落</p>
+<p>这是另一个引用段落</p>
+</blockquote>
+<h1 id="六、Markdown代码块"><a href="#六、Markdown代码块" class="headerlink" title="六、Markdown代码块"></a>六、Markdown代码块</h1><h2 id="6-1行内代码"><a href="#6-1行内代码" class="headerlink" title="6.1行内代码"></a>6.1行内代码</h2><p>使用一对反引号(&#96;)来创建行内代码。如果在行内代码中需要包含反引号本身，可以使用两个反引号对加前后空格来创建。</p>
+<h2 id="6-2代码块！"><a href="#6-2代码块！" class="headerlink" title="6.2代码块！"></a>6.2代码块！</h2><p>将文本的每一行缩进至少四个空格或一个制表符。这样这些文本会变成代码块。</p>
+<h2 id="6-3围栏式代码块！"><a href="#6-3围栏式代码块！" class="headerlink" title="6.3围栏式代码块！"></a>6.3围栏式代码块！</h2><p>在很多 Markdown 解析器里都支持使用三个反引号(&#96;)或三个波浪号(~)来定义围栏式代码块。同时这种代码块配合插件还可以做到代码高亮、行号等高级功能。（如果在代码块中也存在三个反引号或波浪号，可以在外层使用 4 个。）</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">```javascript</span><br><span class="line">const a = 1;</span><br><span class="line">const b = 2;</span><br><span class="line">function add(num1, num2) &#123;</span><br><span class="line">  return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">console.log(add(a, b));</span><br><span class="line">```</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">num1, num2</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(a, b));</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="七、Markdown链接"><a href="#七、Markdown链接" class="headerlink" title="七、Markdown链接"></a>七、Markdown链接</h1><h2 id="7-1链接到网站"><a href="#7-1链接到网站" class="headerlink" title="7.1链接到网站"></a>7.1链接到网站</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[茄迷的bolg](https://brilliantbird.github.io/)</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<p><a class="link"   href="https://brilliantbird.github.io/" >茄迷的bolg <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="7-2高级链接"><a href="#7-2高级链接" class="headerlink" title="7.2高级链接"></a>7.2高级链接</h2><p>链接也可以用变量来代替，文档末尾附带变量地址：<br>这个链接用1作为网址变量<a class="link"   href="http://www.baidu.com/" >baidu <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>这个链接用markdown作为网址变量<a class="link"   href="http://www.markdown.com/" >Markdown <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>然后文档的结尾为变量赋值(网址)</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[1]: http://www.baidu.com</span><br><span class="line">[markdown]: http://www.markdown.com</span><br></pre></td></tr></table></figure></div>
+<p>显示效果：(我在写笔记的时候加了两句，但是这里并没有没有显示出来。加了两句超链接以后，baidu和Markdown就可以变成超链接点进去了)</p>
+<h1 id="八、Markdown图片"><a href="#八、Markdown图片" class="headerlink" title="八、Markdown图片"></a>八、Markdown图片</h1><p>Markdown图片语法格式为：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>开头一个感叹号!</li>
+<li>接着一个方括号，里面放上图片的代替文字</li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的’title’属性文字。</li>
+</ul>
+<p>举个例子：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">![帅哥照片](https://bkimg.cdn.bcebos.com/pic/b17eca8065380cd79123caf75208ba345982b2b72bde?x-bce-process=image/resize,m_lfit,h_4096,limit_1/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5/format,f_auto)</span><br></pre></td></tr></table></figure></div>
+<p>显示效果：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://bkimg.cdn.bcebos.com/pic/b17eca8065380cd79123caf75208ba345982b2b72bde?x-bce-process=image/resize,m_lfit,h_4096,limit_1/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5/format,f_auto"
+                      alt="帅哥照片"
+                ></p>
+<p><strong>补充：带链接的图片</strong></p>
+]]></content>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python</title>
+    <url>/2023/07/14/Python/</url>
+    <content><![CDATA[<h1 id="格式化的精度控制"><a href="#格式化的精度控制" class="headerlink" title="格式化的精度控制"></a>格式化的精度控制</h1><p>使用m.n控制数据的宽度和精度。<br>m，控制宽度，要求是数字（很少用），如果设置的宽度小于数字自身，不生效。<br>.n，控制小数点精度，要求是数字，<strong>会进行小数的四舍五入。</strong></p>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
