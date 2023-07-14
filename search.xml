@@ -1,34 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/07/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>readme</title>
-    <url>/2023/07/11/readme/</url>
-    <content><![CDATA[<p>1.学习Linux。已经学完目录结构，基础的命令指令，相对路径和绝对路径，主机状态监控，ip地址和主机名，端口，环境变量，压缩解压，在Ubuntu和CentOS上安装部署MySQL软件。  </p>
-<p>2.完成追色块任务  </p>
-<p>3.和伟晨一起换了一次电机电调</p>
-<p>4.学习做线，完成人生第一次做线</p>
-<p>5.写去年电赛题目飞控代码，键盘输入+	识别色块</p>
+    <title>Python</title>
+    <url>/2023/07/14/Python/</url>
+    <content><![CDATA[<h1 id="格式化的精度控制"><a href="#格式化的精度控制" class="headerlink" title="格式化的精度控制"></a>格式化的精度控制</h1><p>使用m.n控制数据的宽度和精度。<br>m，控制宽度，要求是数字（很少用），如果设置的宽度小于数字自身，不生效。<br>.n，控制小数点精度，要求是数字，<strong>会进行小数的四舍五入。</strong></p>
 ]]></content>
       <tags>
-        <tag>note</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -191,26 +169,94 @@
 </ul>
 <p>举个例子：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">![帅哥照片](https://bkimg.cdn.bcebos.com/pic/b17eca8065380cd79123caf75208ba345982b2b72bde?x-bce-process=image/resize,m_lfit,h_4096,limit_1/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5/format,f_auto)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>1. 补充：带链接的图片</strong></p>
+<p>下面的代码，把生成图片的代码放到了超链接的名称里面。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[![这是一个图片](/images/tutorials/markdown/工具页截图-dark.png)](/tools/)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>2. 补充：带title的图片</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">![这是一个图片](/images/tutorials/markdown/工具页截图-dark.png &quot;这是工具页的截图&quot;)</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="九、Emoji表情"><a href="#九、Emoji表情" class="headerlink" title="九、Emoji表情"></a>九、Emoji表情</h1><p>在 Markdown 里使用 Emoji 表情有两种方法，一种是直接输入 Emoji 表情，另一种是使用 Emoji 表情短码(emoji shartcodes)。</p>
+<p>Emoji 表情短码放到两个冒号(:)之间，比如： :joy:😂。</p>
+<h1 id="十、表格"><a href="#十、表格" class="headerlink" title="十、表格"></a>十、表格</h1><p>表格使用竖线(|)区分每一列，在表格头和表格体之间第列使用至少三个减号(-)来做为分隔。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">|第一列|第二列|第三列|</span><br><span class="line">|---|---|---|</span><br><span class="line">|第一行第一列|第一行第二列|第一行第三列|</span><br><span class="line">|第二行第一列|第二行第二列|第二行第三列|</span><br></pre></td></tr></table></figure></div>
+
 <p>显示效果：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://bkimg.cdn.bcebos.com/pic/b17eca8065380cd79123caf75208ba345982b2b72bde?x-bce-process=image/resize,m_lfit,h_4096,limit_1/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5/format,f_auto"
-                      alt="帅哥照片"
-                ></p>
-<p><strong>补充：带链接的图片</strong></p>
+<table>
+<thead>
+<tr>
+<th>第一列</th>
+<th>第二列</th>
+<th>第三列</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第一行第一列</td>
+<td>第一行第二列</td>
+<td>第一行第三列</td>
+</tr>
+<tr>
+<td>第二行第一列</td>
+<td>第二行第二列</td>
+<td>第二行第三列</td>
+</tr>
+</tbody></table>
+<p><strong>补充：设置表格的对齐方式</strong></p>
+<p>下列代码，在第二行的每一列都添加了冒号(:)，左侧添加一个冒号表示该列左对齐，右侧添加一个冒号表示该列右对齐，左右各添加一个冒号表示该列居中对齐。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">|第一列|第二列|第三列|</span><br><span class="line">|:---|:---:|---:|</span><br><span class="line">|这一列是左对齐的|这一列是居中对齐的|这一列是右对齐的|</span><br></pre></td></tr></table></figure></div>
+
+<p>显示效果：</p>
+<table>
+<thead>
+<tr>
+<th align="left">第一列</th>
+<th align="center">第二列</th>
+<th align="right">第三列</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">这一列是左对齐的</td>
+<td align="center">这一列是居中对齐的</td>
+<td align="right">这一列是右对齐的</td>
+</tr>
+</tbody></table>
+<p>在表格中可以使用斜体单行元素，比如粗体斜体、行内代码、超链接、图片、Emoji表情、HTML等。</p>
+<p>关于图表，公式，脚注，注释，内嵌HTML和React的相关内容未完待续！！！</p>
 ]]></content>
       <tags>
         <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
-    <title>Python</title>
-    <url>/2023/07/14/Python/</url>
-    <content><![CDATA[<h1 id="格式化的精度控制"><a href="#格式化的精度控制" class="headerlink" title="格式化的精度控制"></a>格式化的精度控制</h1><p>使用m.n控制数据的宽度和精度。<br>m，控制宽度，要求是数字（很少用），如果设置的宽度小于数字自身，不生效。<br>.n，控制小数点精度，要求是数字，<strong>会进行小数的四舍五入。</strong></p>
+    <title>Hello World</title>
+    <url>/2023/07/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>readme</title>
+    <url>/2023/07/11/readme/</url>
+    <content><![CDATA[<p>1.学习Linux。已经学完目录结构，基础的命令指令，相对路径和绝对路径，主机状态监控，ip地址和主机名，端口，环境变量，压缩解压，在Ubuntu和CentOS上安装部署MySQL软件。  </p>
+<p>2.完成追色块任务  </p>
+<p>3.和伟晨一起换了一次电机电调</p>
+<p>4.学习做线，完成人生第一次做线</p>
+<p>5.写去年电赛题目飞控代码，键盘输入+	识别色块</p>
 ]]></content>
       <tags>
-        <tag>Python</tag>
+        <tag>note</tag>
       </tags>
   </entry>
 </search>
