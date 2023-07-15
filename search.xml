@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Python</title>
-    <url>/2023/07/14/Python/</url>
-    <content><![CDATA[<h1 id="格式化的精度控制"><a href="#格式化的精度控制" class="headerlink" title="格式化的精度控制"></a>格式化的精度控制</h1><p>使用m.n控制数据的宽度和精度。<br>m，控制宽度，要求是数字（很少用），如果设置的宽度小于数字自身，不生效。<br>.n，控制小数点精度，要求是数字，<strong>会进行小数的四舍五入。</strong></p>
+    <title>Hello World</title>
+    <url>/2023/07/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
   </entry>
   <entry>
     <title>Markdown</title>
@@ -229,22 +238,43 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/07/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+    <title>格式化的精确控制 &amp; 数据输入（input语句）</title>
+    <url>/2023/07/14/Python/</url>
+    <content><![CDATA[<h1 id="格式化的精度控制"><a href="#格式化的精度控制" class="headerlink" title="格式化的精度控制"></a>格式化的精度控制</h1><p>使用m.n控制数据的宽度和精度。<br>m，控制宽度，要求是数字（很少用），如果设置的宽度小于数字自身，不生效。<br>.n，控制小数点精度，要求是数字，<strong>会进行小数的四舍五入，数据会失真</strong></p>
+<h2 id="字符串快速格式化"><a href="#字符串快速格式化" class="headerlink" title="字符串快速格式化"></a>字符串快速格式化</h2><p>语法：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">f&quot;内容&#123;变量&#125;&quot;</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<p> 此时的变量不限制数据类型，不会进行进度控制，会原样输出。这里的大括号就是占位符。</p>
+<p>比如：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;qiemi&quot;</span></span><br><span class="line">age = <span class="number">18</span></span><br><span class="line">printf(<span class="string">f&quot;我是<span class="subst">&#123;name&#125;</span>,我今年<span class="subst">&#123;age&#125;</span>岁了&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<p>特点：</p>
+<ol>
+<li><p>不理会类型（类似于c++的cout）</p>
+</li>
+<li><p>不做精度控制（适合对精度没有要求的时候快速使用）</p>
+</li>
+</ol>
+<h2 id="对表达式格式化"><a href="#对表达式格式化" class="headerlink" title="对表达式格式化"></a>对表达式格式化</h2><p>首先，什么是表达式？</p>
+<p>表达式：一条具有<strong>明确执行结果</strong>的<strong>代码语句</strong>。<br>比如“</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1+1</span><br><span class="line">2*2</span><br><span class="line">name = &quot;qiemi&quot;</span><br><span class="line">age = 19</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>表达式的格式化：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;1+1的结果是： %d&quot;</span> %(<span class="number">1</span>+<span class="number">1</span>)) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;9*9的结果是： <span class="subst">&#123;<span class="number">9</span>*<span class="number">9</span>&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;字符串在Python里面的的类型是 ：%s&quot;</span> % <span class="built_in">type</span>(<span class="string">&#x27;字符串&#x27;</span>))</span><br></pre></td></tr></table></figure></div>
+
+<p>适合在不需要变量进行数据存储的时候，可以直接格式化表达式，简化代码。</p>
+<h1 id="数据输入（input语句）"><a href="#数据输入（input语句）" class="headerlink" title="数据输入（input语句）"></a>数据输入（input语句）</h1><p>语法：<br>使用一个变量接收（存储）input语句获取的键盘输入数据即可</p>
+<p>比如：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;请输入你的名字&quot;</span>)</span><br><span class="line">name = <span class="built_in">input</span>();</span><br></pre></td></tr></table></figure></div>
+<p>上述例子的print其实是多余的，因为input语句自身就可以输出提示内容。所以可以进行简化：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的名字&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>！！！input语句不管你写入的是什么数据，默认统统当做字符串看待！！！</strong></p>
 ]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
   </entry>
   <entry>
     <title>readme</title>
