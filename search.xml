@@ -352,7 +352,7 @@
 <p>for循环创建的临时变量的作用范围只在for循环的内部， <strong>也就是作用域就在循环体内</strong>，不应该在for循环外部生效（不是不可能）。实际上是可以访问到的，但是在编程的规范上是不允许、不建议这么做。可以在for循环之前就定义好i。</p>
 <h2 id="2-4-for循环的嵌套"><a href="#2-4-for循环的嵌套" class="headerlink" title="2.4 for循环的嵌套"></a>2.4 for循环的嵌套</h2><p>语法格式和while嵌套循环一样的。</p>
 <p>关键点就是注意好<strong>空格缩进</strong>就行了</p>
-<h1 id="3-break和continue关键字"><a href="#3-break和continue关键字" class="headerlink" title="3. break和continue关键字"></a>3. break和continue关键字</h1><p><strong>这两个关键字的用法和c语言中一样</strong></p>
+<h2 id="3-break和continue关键字"><a href="#3-break和continue关键字" class="headerlink" title="3. break和continue关键字"></a>3. break和continue关键字</h2><p><strong>这两个关键字的用法和c语言中一样</strong></p>
 <p>continue：中断本次循环，直接进入下一次循环。可用于for和while循环，效果一致。</p>
 <p>注意：</p>
 <ul>
