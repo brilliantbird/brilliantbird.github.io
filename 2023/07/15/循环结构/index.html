@@ -13,17 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/tags/note/"/>
+    <link rel="canonical" href="http://example.com/2023/07/15/循环结构/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/note/index.html">
+        <meta name="description" content="循环结构1.1while循环的基础使用语法格式： 12while 条件：    条件满足时执行的语句…… 只要条件（可以是bool或者比较运算）满足，就会无限循环执行 1.2while的嵌套循环和if的嵌套几乎一模一样，只需要把if的嵌套中的if改成while就是while的嵌套循环了。 注意：此处的嵌套循环同样是基于空格缩进来决定层次关系。  补充内容：  默认print语句输出内容会自动换行，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="循环结构">
+<meta property="og:url" content="http://example.com/2023/07/15/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="循环结构1.1while循环的基础使用语法格式： 12while 条件：    条件满足时执行的语句…… 只要条件（可以是bool或者比较运算）满足，就会无限循环执行 1.2while的嵌套循环和if的嵌套几乎一模一样，只需要把if的嵌套中的if改成while就是while的嵌套循环了。 注意：此处的嵌套循环同样是基于空格缩进来决定层次关系。  补充内容：  默认print语句输出内容会自动换行，">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-15T09:07:27.000Z">
+<meta property="article:modified_time" content="2023-07-15T14:24:35.126Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
     
     
@@ -36,7 +41,7 @@
     
     <title>
         
-            Tag: note -
+            循环结构 -
         
         CM&#39;s Blog
     </title>
@@ -317,39 +322,287 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="tag-container">
-        <div class="tag-name"><i class="fa-solid fa-tag"></i>&nbsp;note
-        </div>
-        <div class="tag-post-list">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
             
-<div class="archive-list-container">
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">循环结构</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/666.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">CM</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-07-15 17:07:27</span>
+        <span class="mobile">2023-07-15 17:07</span>
+        <span class="hover-info">Created</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='07-11'>
-                <a href="/2023/07/11/readme/">
-                  <span class="article-title">readme</span>
-                </a>
-              </li>
-              
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-07-15 22:24:35</span>
+            <span class="mobile">2023-07-15 22:24</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Python/">Python</a>&nbsp;
+                    </li>
+                
             </ul>
-        </section>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
-        </div>
-    </div>
+                        </div>
+                    </div>
+                </div>
+            
 
-    <div class="tag-paginator">
-        <div class="paginator">
-    <span class="page-number current">1</span>
+            <div class="article-content markdown-body">
+                <h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><h2 id="1-1while循环的基础使用"><a href="#1-1while循环的基础使用" class="headerlink" title="1.1while循环的基础使用"></a>1.1while循环的基础使用</h2><p>语法格式：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 条件：</span><br><span class="line">    条件满足时执行的语句……</span><br></pre></td></tr></table></figure></div>
+<p><strong>只要条件（可以是bool或者比较运算）满足，就会无限循环执行</strong></p>
+<h2 id="1-2while的嵌套循环"><a href="#1-2while的嵌套循环" class="headerlink" title="1.2while的嵌套循环"></a>1.2while的嵌套循环</h2><p>和if的嵌套几乎一模一样，只需要把if的嵌套中的if改成while就是while的嵌套循环了。</p>
+<p><strong>注意：此处的嵌套循环同样是基于空格缩进来决定层次关系。</strong></p>
+<hr>
+<p>补充内容：</p>
+<ol>
+<li>默认print语句输出内容会自动换行，所以有时候也会用print语句输出空内容来实现换行。（与c语言不同）</li>
+</ol>
+<p>如果想要使用print语句，输出不换行的功能的话，需要这么写：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello&quot;</span>,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;World&quot;</span>,end=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<ol start="2">
+<li>制表符\t<br>效果等同于tab键，可以让多行字符串进行对齐。</li>
+</ol>
+<h2 id="示例：如此输出以后，上下俩行的上下两个字符串就会对齐！"><a href="#示例：如此输出以后，上下俩行的上下两个字符串就会对齐！" class="headerlink" title="示例：如此输出以后，上下俩行的上下两个字符串就会对齐！"></a>示例：<br><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;Hello\tWorld&quot;)</span><br><span class="line">print(&quot;qiemi\t666&quot;)</span><br></pre></td></tr></table></figure></div><br>如此输出以后，上下俩行的上下两个字符串就会对齐！</h2><h2 id="2-1-for循环基础语法"><a href="#2-1-for循环基础语法" class="headerlink" title="2.1 for循环基础语法"></a>2.1 for循环基础语法</h2><p>与while循环的区别：</p>
+<ul>
+<li>while循环的循环条件是自定义的，<strong>自行控制循环条件</strong></li>
+<li>for循环是一种<strong>“轮询”</strong>机制，是对一批内容进行“逐个处理”</li>
+</ul>
+<p>语法格式：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 临时变量 <span class="keyword">in</span> 待处理数据集（序列):</span><br><span class="line">    循环满足条件时执行的代码</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>in是一个关键字</li>
+<li>执行逻辑是从待处理数据集中的数据逐个取出，每个循环就将当前输出赋予这个临时变量，然后执行循环体内的代码。</li>
+</ul>
+<p>举个例子：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;cheming&quot;</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> name:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>for循环是无法定义循环条件的，只呢从数据集里面依次取出内容进行处理，理论上来说Python的for循环无法构建无限循环。</p>
+</li>
+<li><p>同样有空格缩进</p>
+</li>
+</ul>
+<h2 id="2-2-range语句"><a href="#2-2-range语句" class="headerlink" title="2.2 range语句"></a>2.2 range语句</h2><p>待处理数据集的严格说法叫做：序列类型。<br>序列类型指：内容可以一个个依次取出的一种类型。包括：</p>
+<ul>
+<li>字符串</li>
+<li>列表</li>
+<li>元组</li>
+<li>等</li>
+</ul>
+<p>因此for循环语句，本质上是遍历：序列类型。</p>
+<p>学习range语句，获得一个简单的数字序列：</p>
+<p>语法1：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">range</span>(num)</span><br></pre></td></tr></table></figure></div>
+<p>可以获取一个从0开始，到num结束的数字序列（不含num本身）</p>
+<p>比如range（5）取得的数据是： [0,1,2,3,4,]</p>
+<p>语法2：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">range</span>(num1,num2)</span><br></pre></td></tr></table></figure></div>
+<p>获得一个从num1开始，到num2结束的数字序列（不包含num2本身）</p>
+<p>语法3：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">range</span>(num1,num2,step)</span><br></pre></td></tr></table></figure></div>
+
+<p>获得一个从num1开始，到num2结束的数字序列（不包含num2本身），并且数字之间的步长以step为准。（step默认是1）</p>
+<p>大多数的range序列都是配合for循环使用的</p>
+<h2 id="2-3-变量作用域"><a href="#2-3-变量作用域" class="headerlink" title="2.3 变量作用域"></a>2.3 变量作用域</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></div>
+<p>这样子的写法：</p>
+<ul>
+<li>规范上：不允许</li>
+<li>实际上：允许</li>
+</ul>
+<p>for循环创建的临时变量的作用范围只在for循环的内部， <strong>也就是作用域就在循环体内</strong>，不应该在for循环外部生效（不是不可能）。实际上是可以访问到的，但是在编程的规范上是不允许、不建议这么做。可以在for循环之前就定义好i。</p>
+<h2 id="2-4-for循环的嵌套"><a href="#2-4-for循环的嵌套" class="headerlink" title="2.4 for循环的嵌套"></a>2.4 for循环的嵌套</h2><p>语法格式和while嵌套循环一样的。</p>
+<p>关键点就是注意好<strong>空格缩进</strong>就行了</p>
+<h1 id="3-break和continue关键字"><a href="#3-break和continue关键字" class="headerlink" title="3. break和continue关键字"></a>3. break和continue关键字</h1><p><strong>这两个关键字的用法和c语言中一样</strong></p>
+<p>continue：中断本次循环，直接进入下一次循环。可用于for和while循环，效果一致。</p>
+<p>注意：</p>
+<ul>
+<li>如果是在嵌套循环中，continue只能在它所在的循环临时中断。也就是只会中断内部循环，而不会中断外部循环。</li>
+</ul>
+<p>break： 直接结束循环，可用于for和while循环，效果一致。<br>注意：</p>
+<ul>
+<li>在嵌套循环中的用法与continue一样。</li>
+</ul>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 循环结构</li>
+        <li><strong>Author:</strong> CM</li>
+        <li><strong>Created at:</strong> 2023-07-15 17:07:27</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-07-15 22:24:35
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/07/15/循环结构/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
 </div>
 
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Python/">#Python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/07/15/%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">判断语句</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '1ee4fa0b220064f9bc48',
+                    clientSecret: '053171b1c235268477d8506ab4a61fa7b6b41cd2',
+                    repo: 'Gittalk',
+                    owner: 'brilliantbird',
+                    admin: ['brilliantbird'],
+                    id: __gitalk__pathname,
+                    language: 'en'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">循环结构</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-text">循环结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1while%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8"><span class="nav-text">1.1while循环的基础使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2while%E7%9A%84%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF"><span class="nav-text">1.2while的嵌套循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%9A%E5%A6%82%E6%AD%A4%E8%BE%93%E5%87%BA%E4%BB%A5%E5%90%8E%EF%BC%8C%E4%B8%8A%E4%B8%8B%E4%BF%A9%E8%A1%8C%E7%9A%84%E4%B8%8A%E4%B8%8B%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%B1%E4%BC%9A%E5%AF%B9%E9%BD%90%EF%BC%81"><span class="nav-text">示例：12print(&quot;Hello\tWorld&quot;)print(&quot;qiemi\t666&quot;)如此输出以后，上下俩行的上下两个字符串就会对齐！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-for%E5%BE%AA%E7%8E%AF%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="nav-text">2.1 for循环基础语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-range%E8%AF%AD%E5%8F%A5"><span class="nav-text">2.2 range语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-text">2.3 变量作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-for%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%B5%8C%E5%A5%97"><span class="nav-text">2.4 for循环的嵌套</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-break%E5%92%8Ccontinue%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">3. break和continue关键字</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
     </div>
 </div>
 
@@ -425,6 +678,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -569,6 +843,16 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
     
 </div>
 
