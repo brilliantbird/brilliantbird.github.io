@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/07/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Markdown</title>
     <url>/2023/07/14/Markdown/</url>
     <content><![CDATA[<h1 id="一、Markdown简介"><a href="#一、Markdown简介" class="headerlink" title="一、Markdown简介"></a>一、Markdown简介</h1><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
@@ -234,12 +216,89 @@
 <p>关于图表，公式，脚注，注释，内嵌HTML和React的相关内容未完待续！！！</p>
 ]]></content>
       <tags>
-        <tag>markdown</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/07/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>readme</title>
+    <url>/2023/07/11/readme/</url>
+    <content><![CDATA[<p>1.学习Linux。已经学完目录结构，基础的命令指令，相对路径和绝对路径，主机状态监控，ip地址和主机名，端口，环境变量，压缩解压，在Ubuntu和CentOS上安装部署MySQL软件。  </p>
+<p>2.完成追色块任务  </p>
+<p>3.和伟晨一起换了一次电机电调</p>
+<p>4.学习做线，完成人生第一次做线</p>
+<p>5.写去年电赛题目飞控代码，键盘输入+	识别色块</p>
+]]></content>
+      <tags>
+        <tag>note</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>判断语句</title>
+    <url>/2023/07/15/%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5/</url>
+    <content><![CDATA[<h1 id="一、bool类型和比较运算符"><a href="#一、bool类型和比较运算符" class="headerlink" title="一、bool类型和比较运算符"></a>一、bool类型和比较运算符</h1><p>bool类型的本质还是数字类型，True的底层就是1，False底层就是0。</p>
+<p>bool类型的数据不仅可以通过定义得到，也可以通过比较运算符（&#x3D;&#x3D;、&gt;、&lt;、!&#x3D;、&gt;&#x3D;、&lt;&#x3D;）进行内容比较得到。  </p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">bool_1 = Ture</span><br><span class="line">bool_2 = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">bool_3 = <span class="number">5</span>&gt;<span class="number">3</span></span><br><span class="line">bool_4 = <span class="number">1</span>&gt;<span class="number">6</span></span><br><span class="line">bool_5 = <span class="number">1</span> ==<span class="number">1</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="二、if语句的基本格式"><a href="#二、if语句的基本格式" class="headerlink" title="二、if语句的基本格式"></a>二、if语句的基本格式</h1><h2 id="2-1-if基本格式"><a href="#2-1-if基本格式" class="headerlink" title="2.1 if基本格式"></a>2.1 if基本格式</h2><p>语法格式：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 要判断的条件：</span><br><span class="line">    条件成立时要执行的语句</span><br></pre></td></tr></table></figure></div>
+<p>细节：  </p>
+<ul>
+<li>冒号别少了</li>
+<li>与c语言用大括号来判断归属关系不同的是Python是通过空格缩进来判断归属关系的！（四个空格缩进）</li>
+<li>判断语句的结果必须是bool类型的True和False</li>
+</ul>
+<h2 id="2-2-if-else语句"><a href="#2-2-if-else语句" class="headerlink" title="2.2 if else语句"></a>2.2 if else语句</h2><p>语法格式：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">if 条件:</span><br><span class="line">    条件成立时要执行的语句</span><br><span class="line">else:</span><br><span class="line">    不满足的时候执行的语句</span><br></pre></td></tr></table></figure></div>
+
+<p>注意 ：</p>
+<ul>
+<li>else不需要判断条件</li>
+<li>else同样需要四个空格进行缩进</li>
+</ul>
+<h2 id="2-3-if-elif-else语句进行多条件判断的语法"><a href="#2-3-if-elif-else语句进行多条件判断的语法" class="headerlink" title="2.3 if elif else语句进行多条件判断的语法"></a>2.3 if elif else语句进行<strong>多条件判断</strong>的语法</h2><p>语法格式：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span>：</span><br><span class="line">    ......</span><br><span class="line"><span class="keyword">elif</span> 条件<span class="number">2</span>：</span><br><span class="line">    ......</span><br><span class="line"><span class="keyword">elif</span> 条件<span class="number">3</span>：</span><br><span class="line">    ......</span><br><span class="line"><span class="keyword">else</span>：</span><br><span class="line">    ......</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>可以实现多条件判断！！！先判断条件1满足不满足，然后再依次判断条件2，条件3……如果全部不满足就执行else</strong></p>
+<p>注意：</p>
+<ul>
+<li>判断是互斥且<strong>有顺序的</strong></li>
+<li>满足其中一个条件，执行完相关的语句以后就会跳出这个层次的if语句。</li>
+<li>else可以不写</li>
+<li>空格缩进同样不可省略</li>
+</ul>
+<p>举个例子：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">num == <span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请猜一个数字： &quot;</span>)) == num：</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;猜对了&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;猜错了，再猜一个数字： &quot;</span>)) == num：</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;猜对了&quot;</span>)</span><br><span class="line"><span class="keyword">else</span> ：</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;猜错了&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<p>这个例子告诉我们，if elif else是按顺序从上往下一个个执行的，其次可以在if的条件里面去写input函数，这样子代码更加简洁。别忘了把输入的数据转换成int类型后再进行比较！</p>
+<h2 id="2-4判断语句的嵌套"><a href="#2-4判断语句的嵌套" class="headerlink" title="2.4判断语句的嵌套"></a>2.4判断语句的嵌套</h2><p>由于许多的逻辑的判断是嵌套的，多层次的。对于这种需求，我们可以自由组合if elif else ，完成特定需求的要求。</p>
+<p>语法格式：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span>：</span><br><span class="line">    …………</span><br><span class="line">    <span class="keyword">if</span> 条件<span class="number">2</span>：</span><br><span class="line">        …………</span><br><span class="line">        …………</span><br></pre></td></tr></table></figure></div>
+<p>可以看到，只有条件1满足以后才会去判断条件2是否满足。<br>嵌套的关键在于<strong>空格缩进！！！</strong><br>还是记住：通过空格缩进来决定语句之间的：<strong>层次关系</strong></p>
+]]></content>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
     <title>格式化的精确控制 &amp; 数据输入（input语句）</title>
-    <url>/2023/07/14/Python/</url>
+    <url>/2023/07/14/%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%9A%84%E7%B2%BE%E7%A1%AE%E6%8E%A7%E5%88%B6%20&amp;%20%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%EF%BC%88input%E8%AF%AD%E5%8F%A5%EF%BC%89/</url>
     <content><![CDATA[<h1 id="格式化的精度控制"><a href="#格式化的精度控制" class="headerlink" title="格式化的精度控制"></a>格式化的精度控制</h1><p>使用m.n控制数据的宽度和精度。<br>m，控制宽度，要求是数字（很少用），如果设置的宽度小于数字自身，不生效。<br>.n，控制小数点精度，要求是数字，<strong>会进行小数的四舍五入，数据会失真</strong></p>
 <h2 id="字符串快速格式化"><a href="#字符串快速格式化" class="headerlink" title="字符串快速格式化"></a>字符串快速格式化</h2><p>语法：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">f&quot;内容&#123;变量&#125;&quot;</span><br></pre></td></tr></table></figure></div>
@@ -270,23 +329,10 @@
 <p>上述例子的print其实是多余的，因为input语句自身就可以输出提示内容。所以可以进行简化：</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的名字&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<p><strong>！！！input语句不管你写入的是什么数据，默认统统当做字符串看待！！！</strong></p>
+<p><strong>！！！input语句不管你写入的是什么数据，默认统统当做字符串看待！！！所以记得进行对应的数据类型转换</strong></p>
 ]]></content>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>readme</title>
-    <url>/2023/07/11/readme/</url>
-    <content><![CDATA[<p>1.学习Linux。已经学完目录结构，基础的命令指令，相对路径和绝对路径，主机状态监控，ip地址和主机名，端口，环境变量，压缩解压，在Ubuntu和CentOS上安装部署MySQL软件。  </p>
-<p>2.完成追色块任务  </p>
-<p>3.和伟晨一起换了一次电机电调</p>
-<p>4.学习做线，完成人生第一次做线</p>
-<p>5.写去年电赛题目飞控代码，键盘输入+	识别色块</p>
-]]></content>
-      <tags>
-        <tag>note</tag>
       </tags>
   </entry>
 </search>
