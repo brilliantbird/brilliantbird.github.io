@@ -406,4 +406,81 @@
         <tag>Python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>函数</title>
+    <url>/2023/07/16/%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>特点：</p>
+<ul>
+<li>已经组织好的</li>
+<li>可重复使用</li>
+<li>针对特定功能</li>
+</ul>
+<p>使用函数可以：得到一个针对特定需求、可供重复利用的代码段。提供程序的复用性、减少重复性代码，提高开发效率。  </p>
+<h2 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h2><p>函数定义语法格式：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">函数名</span>(<span class="params">传入参数</span>):</span><br><span class="line">    函数体</span><br><span class="line">    <span class="keyword">return</span> 返回值</span><br></pre></td></tr></table></figure></div>
+
+<p>函数调用：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">函数名(参数)</span><br></pre></td></tr></table></figure></div>
+<p>注意：</p>
+<ul>
+<li>参数和返回值都可以省略</li>
+<li>函数必须先定义后使用</li>
+</ul>
+<h2 id="函数的传入参数"><a href="#函数的传入参数" class="headerlink" title="函数的传入参数"></a>函数的传入参数</h2><p>示例：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x,y</span>)</span><br><span class="line">    result = x + y</span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>x,y称为形式参数，表示函数就要使用这两个参数。</li>
+<li><strong>c参数之间用逗号分隔</strong></li>
+<li>函数调用中，提供的参数称之为实际参数，表示函数执行的时候真正使用的参数值。</li>
+<li>传入实际参数的时候，按照顺序传入数据，使用逗号分隔。</li>
+<li>传入参数的个数是不受限制的，可以不使用参数，也可以仅使用任意的N个参数。</li>
+</ul>
+<h2 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h2><p><strong>通过return关键字将函数执行结果返回给函数的调用者。</strong></p>
+<p>函数体遇到return以后就结束了，所以写在return后面的代码就不会执行了。</p>
+<h2 id="None类型"><a href="#None类型" class="headerlink" title="None类型"></a>None类型</h2><p>如果函数没有使用return语句返回数据，函数也是有返回值的。Python中有一个特殊的字面量：None，类型是：&lt;class‘NoneType’&gt;，无返回值的函数，实际上就是返回了：None这个字面量。表示函数没有返回什么有意义的内容，也就是返回了空的意思。</p>
+<p>应用场景：</p>
+<ol>
+<li><p>用在函数无返回值上</p>
+</li>
+<li><p>用在if判断中</p>
+<ul>
+<li>在if判断中，None等同于False</li>
+<li>一般在函数中主动返回None，配合if判断做相关处理。</li>
+</ul>
+</li>
+<li><p>用于声明无内容的变量上</p>
+<ul>
+<li>定义变量，但暂时不需要变量有具体值，可以用None来代替</li>
+</ul>
+</li>
+</ol>
+<h2 id="函数说明文档"><a href="#函数说明文档" class="headerlink" title="函数说明文档"></a>函数说明文档</h2><p>我们通过给函数添加说明文档，辅助理解函数的作用。</p>
+<p>通过多行注释的形式，对函数进行说明解释。</p>
+<ul>
+<li>内容应写在函数体之前。</li>
+</ul>
+<p>建议的语法格式：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">x,y</span>)</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    函数说明</span></span><br><span class="line"><span class="string">    ：param x：形参x的说明</span></span><br><span class="line"><span class="string">    ：param y：形参y的说明</span></span><br><span class="line"><span class="string">    ：return： 返回值的说明</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>PyCharm会自动补全</li>
+<li>在PyCharm编写代码的时候，通过鼠标悬停，可以查看调用函数的说明文档</li>
+</ul>
+<h2 id="函数的嵌套调用"><a href="#函数的嵌套调用" class="headerlink" title="函数的嵌套调用"></a>函数的嵌套调用</h2><p>定义： 在一个函数里面又调用另外一个函数。</p>
+<ul>
+<li>在函数A中，调用另外一个函数B，那么先把函数B的任务都执行完才会回到上次函数A执行的位置，继续往下面执行。</li>
+</ul>
+<h2 id="函数中的变量作用域"><a href="#函数中的变量作用域" class="headerlink" title="函数中的变量作用域"></a>函数中的变量作用域</h2><p>变量作用域指的是变量的作用范围（变量在哪里可用，在哪里不可用）<br>主要分为俩类：<strong>局部变量和全局变量</strong></p>
+<p><strong>局部变量：定义在函数体内部的变量，就只能在函数体内部生效。</strong></p>
+<p><strong>全局变量：在函数体内部和外部都可以生效的变量</strong></p>
+<h3 id="global关键字"><a href="#global关键字" class="headerlink" title="global关键字"></a>global关键字</h3><p>如果在函数内部修改全局变量的值，那么该全局变量在这个函数内还是按照修改后的值允许，但是在函数的外面，该全局变量的值其实并没有发送改变。也就是说，该全局变量在函数体内部还是被看做是一个局部变量了，和外面的全局变量没有一点关系。</p>
+<p>那么，我们就是想在函数内部将全局变量的值修改，要怎么办呢？</p>
+<p>使用global关键字。</p>
+<p>在函数体内通过global声明变量，以代表该变量是一个全局变量。</p>
+<p><strong>总结：global关键字可以让在函数内定义的变量变成全局变量。</strong></p>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
