@@ -812,4 +812,54 @@
         <tag>Python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>pid控制算法</title>
+    <url>/2023/07/18/pid%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="PID"><a href="#PID" class="headerlink" title="PID"></a>PID</h1><ol>
+<li>介绍pid</li>
+</ol>
+<ul>
+<li>引言如果不用PID算法，想要让小车前进100米，那就要得到小车的速度，然后100&#x2F;v得到小车前进的时间，然后让小车在这段时间内一直前进就好了。<br>这种控制叫做开放回路控制系统。因为机器人的输出(也就是机器人的位置)并不会发过来影响机器人的输入(也就是电机的转动)。</li>
+</ul>
+<p>这种方式在要求不高的场合是可以的。但是如果小车在运动过程中发生了偏移，或者前进的路面是不平坦的，又或者是机器人的速度慢了一点点，那么机器人就永远达到不了预期的100米位置。</p>
+<p>因此在这种情况下，我们更加需要的是一种，闭环的控制系统。也就是输出会返回来影响输入，也就是引入反馈，利用反馈，去弥补干扰，比如说干扰让输出减小了1，反馈就让输出再多1。PID是闭环控制的一种，pid也是应用最为广泛的一种。</p>
+<ol start="2">
+<li>闭环控制系统<br>（pid适合于二阶以内的线性系统：满足齐次性和叠加性）<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-1.png"
+                      alt="Alt text"
+                ></li>
+</ol>
+<ul>
+<li>单闭环：引入了闭环控制系统，信号的输入在输入到控制器之前会先进行因此运算，E(误差，也就是净输入) &#x3D; X(输入) - Y(反馈) ，然后控制器计算得到控制信号Uc，给到执行器，执行器作用到对象，对象再输出Y反馈回去。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-2.png"
+                      alt="Alt text"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-3.png"
+                      alt="Alt text"
+                ></p>
+<ul>
+<li>双闭环 ：内层的环相当于可以控制管道内的流量变化不会剧烈变化。</li>
+</ul>
+<ol start="3">
+<li>参数详解</li>
+</ol>
+<ul>
+<li>误差：输入减去输出，也就是净输入。</li>
+<li>控制器输出：将误差经过运算，得到需要执行器执行的量。（可以理解为水阀需要扭多少角度）</li>
+<li>执行器输出：接收到了控制器输出以后，执行器做出对应的输出。（可以理解为水阀打开的开口的大小）</li>
+<li>系统输出：就是最后对象的输出，</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>PID</tag>
+      </tags>
+  </entry>
 </search>
