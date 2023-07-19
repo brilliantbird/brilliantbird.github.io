@@ -768,6 +768,76 @@
 <li><p>字典不支持下标索引，所以不能用while循环。</p>
 </li>
 </ol>
+<h2 id="8-数据容器对比总结"><a href="#8-数据容器对比总结" class="headerlink" title="8. 数据容器对比总结"></a>8. 数据容器对比总结</h2><p>简单的分类：</p>
+<ul>
+<li><p>是否支持下标索引：</p>
+<ul>
+<li>支持：列表，元组，字符串 —序列类型</li>
+<li>不支持：集合，字典 —非序列类型</li>
+</ul>
+</li>
+<li><p>是否支持重复元素：</p>
+<ul>
+<li>支持：列表，元组，字符串 —序列类型</li>
+<li>不支持：集合，字典 —非序列类型</li>
+</ul>
+</li>
+<li><p>是否可以修改</p>
+<ul>
+<li>支持：列表，集合，字典<br>  不支持：元组，字符串</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-21.png"
+                      alt="Alt text"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-22.png"
+                      alt="Alt text"
+                ></p>
+<h2 id="9-数据容器的通用操作"><a href="#9-数据容器的通用操作" class="headerlink" title="9. 数据容器的通用操作"></a>9. 数据容器的通用操作</h2><p>数据容器尽管各有各的特点，但是它们也有通用的操作：</p>
+<ol>
+<li>遍历：</li>
+</ol>
+<ul>
+<li>5类数据容器都支持for循环遍历。</li>
+<li>列表，元组，字符串支持while循环。集合，字典不支持(无法下标索引)</li>
+</ul>
+<p>尽管遍历的形式各有不同，但是，他们都支持遍历。</p>
+<ol start="2">
+<li>通用的功能方法：</li>
+</ol>
+<ul>
+<li>len(容器)  统计容器的元素个数</li>
+<li>max(容器)  统计容器的最大元素</li>
+<li>min(容器)  统计容器的最新元素</li>
+</ul>
+<p>（快捷键： shift + alt + 拖动鼠标 ，可以按列选中）</p>
+<ol start="3">
+<li>容器的通用转换功能：</li>
+</ol>
+<p>转换的格式个之前学的数据类型的转换格式是一样的。</p>
+<p>比如:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">list(容器)</span><br></pre></td></tr></table></figure></div>
+<p>将给定的容器转换为列表。注意字符串转列表，是把字符串的每一个字符拿出来当做列表的每一个元素。字典转列表，列表中只存放字典的key。转元组同理。</p>
+<p>其他类型转字符串的话，所有元素都可以保留。</p>
+<p>转集合的话，记住会乱序并且去重。<br>字典转集合同样也是舍去了value，只留下了key。</p>
+<p>能不能转字典？有这个转换函数，但是字典要的是键值对，所以有函数，但是你转不了。</p>
+<ol start="4">
+<li>容器通用排序功能：<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sorted(容器，[reverse=True])</span><br></pre></td></tr></table></figure></div>
+reverse默认是false,如果想要想要排序进行反转，那就第二个参数写一个reverse &#x3D; True进去进行了。否则就不写就是默认参数。</li>
+</ol>
+<p>注意：</p>
+<ul>
+<li>排序以后的结果都是列表对象！实际上就是对内容进行排序然后放到列表中。所以对字典进行排序，结果只有key，没有value了</li>
+</ul>
+<h2 id="10-拓展：字符串比大小"><a href="#10-拓展：字符串比大小" class="headerlink" title="10. 拓展：字符串比大小"></a>10. 拓展：字符串比大小</h2><p>字符串比较是基于数字的码值大小进行比较的(码值就是ASCII码表里面对应的值)</p>
+<p><strong>字符串是按位比较，也就是一位位进行对比，只要有一位大，那么整体就大。</strong></p>
 ]]></content>
       <tags>
         <tag>Python</tag>
