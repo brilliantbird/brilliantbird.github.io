@@ -28,8 +28,25 @@
 <meta property="og:image" content="http://example.com/image-1.png">
 <meta property="og:image" content="http://example.com/image-2.png">
 <meta property="og:image" content="http://example.com/image-3.png">
+<meta property="og:image" content="http://example.com/image-4.png">
+<meta property="og:image" content="http://example.com/image-5.png">
+<meta property="og:image" content="http://example.com/image-6.png">
+<meta property="og:image" content="http://example.com/image-7.png">
+<meta property="og:image" content="http://example.com/image-8.png">
+<meta property="og:image" content="http://example.com/image-9.png">
+<meta property="og:image" content="http://example.com/image-10.png">
+<meta property="og:image" content="http://example.com/image-11.png">
+<meta property="og:image" content="http://example.com/image-12.png">
+<meta property="og:image" content="http://example.com/image-13.png">
+<meta property="og:image" content="http://example.com/image-14.png">
+<meta property="og:image" content="http://example.com/image-15.png">
+<meta property="og:image" content="http://example.com/image-16.png">
+<meta property="og:image" content="http://example.com/image-17.png">
+<meta property="og:image" content="http://example.com/image-18.png">
+<meta property="og:image" content="http://example.com/image-19.png">
+<meta property="og:image" content="http://example.com/image-20.png">
 <meta property="article:published_time" content="2023-07-18T12:07:55.000Z">
-<meta property="article:modified_time" content="2023-07-18T14:51:21.559Z">
+<meta property="article:modified_time" content="2023-07-19T07:12:52.872Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="PID">
 <meta name="twitter:card" content="summary">
@@ -361,8 +378,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-18 22:51:21</span>
-            <span class="mobile">2023-07-18 22:51</span>
+            <span class="desktop">2023-07-19 15:12:52</span>
+            <span class="mobile">2023-07-19 15:12</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -437,8 +454,157 @@
 <li>误差：输入减去输出，也就是净输入。</li>
 <li>控制器输出：将误差经过运算，得到需要执行器执行的量。（可以理解为水阀需要扭多少角度）</li>
 <li>执行器输出：接收到了控制器输出以后，执行器做出对应的输出。（可以理解为水阀打开的开口的大小）</li>
-<li>系统输出：就是最后对象的输出，</li>
+<li>系统输出：就是最后对象的输出，实际的输出，可以理解为最后输出的水流量。</li>
 </ul>
+<ol start="4">
+<li>pid公式</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-4.png"
+                      alt="Alt text"
+                ><br>C是输出，e是误差，也就是净输入。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-5.png"
+                      alt="Alt text"
+                ><br>最后就是用下面那个公式去实现pid的。<br>控制器的输出就等于kp乘以误差 + ki乘以误差的累积 + kd乘以误差的变化值。</p>
+<ol start="5">
+<li>形象解释PID各个参数的含义<br>举个例子:</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-6.png"
+                      alt="Alt text"
+                ><br>在这种单p控制时候下的位置和速度的变化如下图：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-7.png"
+                      alt="Alt text"
+                ><br><strong>P值越大，速度越大，到达期望的时间越短。</strong></p>
+<p>再举个例子：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-8.png"
+                      alt="Alt text"
+                ><br>假设无人机的航模电机的转速达到100转&#x2F;分钟的时候才会和无人机自身重力平衡，无人机就达到悬停。</p>
+<p>那么如果无人机一开始在地面上，实际高度是0，然后P是1，那么P<em>误差，刚刚好就是100，所以无人机在地面无法起飞。如果P等于2，那么无人机起飞到50m的时候，P</em>误差又等于100了，无人机就悬停在了50m的位置。如果P给100，无人机就会悬停在99米的位置。如果P给1000，无人机就悬停在了99.9米的位置。</p>
+<ul>
+<li>可见，用于无人机自身的重力的存在，所以无人机想要达到目标高度是和小车不一样的，如果只靠P的话，只能无限接近期望高度，是永远也达不到期望高度的。</li>
+</ul>
+<p>所以就要引入I，假设现在无人机飞到了99米，距离期望高度还有1m，但是无人机悬停了，不能往上再飞了，这个1m就叫做<strong>稳态误差</strong>。稳态误差一般就是用I弥补的。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-9.png"
+                      alt="Alt text"
+                ><br>P设定完了就不变了，到达99米的时候，由P产生的升力只够维持无人机悬停了。积分I是根据以往的误差积累的，那么现在的误差是不变的，I就会一直线性增加，那么I加上P就产生一个新的升力，然后无人机就可以继续上升，理想情况下无人机就可以达到理想高度。</p>
+<p>那么现在达到目标高度了，误差等于0了，由P产生的升力也等于0了。<br>升力由积分项提供，积分不受当前状态的影响，只受以前所有误差的积累的影响。所以积分项不会因为现在的误差变成0而变了。他只是不再积累了。但是积分项不是0哦！所以此时悬停的工作就给了I。</p>
+<p>那现在来说D！如果P一开始是100，误差一开始也是100.那么一开始的升力就达到了10000，太大了。积分项从100一直积分下去也是挺大的。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-10.png"
+                      alt="Alt text"
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-11.png"
+                      alt="Alt text"
+                ><br>也就是P和I在一开始的时候会非常大。<br>无人机就会直接冲过100米，可能飞到150米然后再飞回来……<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-12.png"
+                      alt="Alt text"
+                ><br>比如这样子。</p>
+<p>所以就要引入微分。微分就是对误差进行求导。导数值就是微分项。一开始PI都是正的，导致E误差是在下降的，所以对误差求导得到的D就是负的，所以D就可以去抵消PI。</p>
+<ol start="6">
+<li>调参</li>
+</ol>
+<p>慢慢调大Kp，直到差不多达到期望高度。然后加入Ki，Ki小一点消除误差效果就差一点反之……发现有超调现象就调大Kd，但是如果Kd太大了会严重影响系统的调节时间，让系统调节时间很长。</p>
+<ul>
+<li>调大Kp直到接近期望高度。</li>
+<li>加入Ki，先给小，然后慢慢加大。然后就接近贴合了。</li>
+<li>但是有时候对于时间有要求的，所以Ki继续给大，就会出现超调了。一般来说引入PI就可以了，如果超调，震荡很明显就引入Kd。</li>
+</ul>
+<ol start="7">
+<li>其余相关控制知识</li>
+</ol>
+<ul>
+<li>积分限幅：假设现在有人在无人机起飞的时候一直按着无人机，那么无人机无法起飞，误差一直是100，积分I就一直积分一直积分，积分到很大。然后这个人突然放手，此时不仅有一个很大的I，P也参与进来，此时升力就非常非常非常大，无人机就会一飞冲天了。所以就要给积分项一个限制，积分项升到多大的时候就不能再升了。</li>
+<li>积分分离：比如现在飞机悬停在了100m了，只靠着I产生的升力悬停。如果突然修改期望高度到1000m，那么误差项就会突变，然后积分项也会随着突然增大很多。也会导致超调。所以可以引入一个判断，如果误差大于某个值的时候，就让积分项等于0，先不用积分项，然后单单只靠P，来把误差变小，然后误差小于一定值再引入I。</li>
+<li>微分先行：不再是让误差直接传给D，而是输出通过传感器传给D，这样子如果期望高度突变，影响是先给到P和I，不会马上给D，这样子就消除了输入突变的影响。</li>
+</ul>
+<ol start="8">
+<li>理论到实际<br>示例1：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-13.png"
+                      alt="Alt text"
+                ><br>控制器就是根据PID的那个公式算得的结果，然后根据CAN协议传给执行器，也就是电调。然后电调给对应的电机电流，然后电机的输出（可以是电机的转速）反馈回去再进行一次pid控制。</li>
+</ol>
+<p>代码讲解：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-14.png"
+                      alt="Alt text"
+                ><br>首先还要定义一下我们的期望输出：</p>
+<ul>
+<li>………….speedPID.target &#x3D; 500; &#x2F;&#x2F;期望输出是电机没秒500转</li>
+</ul>
+<p>然后代码第一行就是获取现在的转速，也就是反馈量。从电机发回来的数据包里面拿到这个转速。<br>然后调用pid_calc这个函数，函数的定义在下面。</p>
+<ul>
+<li>这个算法的第一句就是输入减去输出得到误差值，也就是净输入。</li>
+</ul>
+<p>然后要把这个误差值给到控制器。</p>
+<ul>
+<li>就是第二句就是把算出来的误差e去乘以比例Kp。</li>
+<li>第三句就是累加积分。</li>
+<li>else语句下面的第一句就是计算D</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-15.png"
+                      alt="Alt text"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-16.png"
+                      alt="Alt text"
+                ><br>P,I,D都算出来了，根据公式或者是流程图，得把他们加起来了。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-17.png"
+                      alt="Alt text"
+                ><br>所以这里就是在求和。</p>
+<ul>
+<li><p>还有积分限幅和积分分离，这两个都标记了注释，很好理解。</p>
+</li>
+<li><p>最后的的输出限幅是最后的安全保障。</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-18.png"
+                      alt="Alt text"
+                ><br>特别注意！代码只是演示。实际上使用，这两部分用一个就行了，如果两个都写进去就一次循环里面积分了两次！是错误的。</p>
+<p>如果既想要积分限幅又想要积分分离，那就把第三句的积分去掉，只留下积分分离里面的积分就好了。然后再把积分限幅放到积分分离的累加积分的那一句的下面就行了。</p>
+<p>最后经过公式，求和以后得到的pid_total就是给到执行器的数据。然后执行器执行到对象，然后对象再输出一个反馈量回去。</p>
+<p>示例2：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-19.png"
+                      alt="Alt text"
+                ><br><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1B54y1V7hp?t=855.8&p=5" >点我，看具体细节 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image-20.png"
+                      alt="Alt text"
+                ></p>
 
             </div>
 
@@ -451,7 +617,7 @@
         <li><strong>Created at:</strong> 2023-07-18 20:07:55</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-07-18 22:51:21
+                <strong>Updated at:</strong> 2023-07-19 15:12:52
             </li>
         
         <li>
