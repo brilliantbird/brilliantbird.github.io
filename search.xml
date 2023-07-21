@@ -791,13 +791,13 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-21.png"
+                     data-src="https://pic.imgdb.cn/item/64ba71681ddac507cc25e216.jpg"
                       alt="Alt text"
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-22.png"
+                     data-src="https://pic.imgdb.cn/item/64ba74681ddac507cc3134ed.jpg"
                       alt="Alt text"
                 ></p>
 <h2 id="9-数据容器的通用操作"><a href="#9-数据容器的通用操作" class="headerlink" title="9. 数据容器的通用操作"></a>9. 数据容器的通用操作</h2><p>数据容器尽管各有各的特点，但是它们也有通用的操作：</p>
@@ -897,8 +897,8 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <li>闭环控制系统<br>（pid适合于二阶以内的线性系统：满足齐次性和叠加性）<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-1.png"
-                      alt="Alt text"
+                     data-src="https://pic.imgdb.cn/item/64ba71961ddac507cc2699f7.jpg"
+                     
                 ></li>
 </ol>
 <ul>
@@ -907,12 +907,12 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-2.png"
+                     data-src="https://pic.imgdb.cn/item/64ba71f41ddac507cc27fd74.jpg"
                       alt="Alt text"
                 ><br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-3.png"
+                     data-src="https://pic.imgdb.cn/item/64ba72161ddac507cc288167.jpg"
                       alt="Alt text"
                 ></p>
 <ul>
@@ -933,12 +933,12 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-4.png"
+                     data-src="https://pic.imgdb.cn/item/64ba72381ddac507cc28ff1b.jpg"
                       alt="Alt text"
                 ><br>C是输出，e是误差，也就是净输入。<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-5.png"
+                     data-src="https://pic.imgdb.cn/item/64ba72451ddac507cc292f73.jpg"
                       alt="Alt text"
                 ><br>最后就是用下面那个公式去实现pid的。<br>控制器的输出就等于kp乘以误差 + ki乘以误差的累积 + kd乘以误差的变化值。</p>
 <ol start="5">
@@ -947,18 +947,18 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-6.png"
+                     data-src="https://pic.imgdb.cn/item/64ba72581ddac507cc297874.jpg"
                       alt="Alt text"
                 ><br>在这种单p控制时候下的位置和速度的变化如下图：<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-7.png"
+                     data-src="https://pic.imgdb.cn/item/64ba726b1ddac507cc29bc16.jpg"
                       alt="Alt text"
                 ><br><strong>P值越大，速度越大，到达期望的时间越短。</strong></p>
 <p>再举个例子：<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-8.png"
+                     data-src="https://pic.imgdb.cn/item/64ba72861ddac507cc2a19ee.jpg"
                       alt="Alt text"
                 ><br>假设无人机的航模电机的转速达到100转&#x2F;分钟的时候才会和无人机自身重力平衡，无人机就达到悬停。</p>
 <p>那么如果无人机一开始在地面上，实际高度是0，然后P是1，那么P<em>误差，刚刚好就是100，所以无人机在地面无法起飞。如果P等于2，那么无人机起飞到50m的时候，P</em>误差又等于100了，无人机就悬停在了50m的位置。如果P给100，无人机就会悬停在99米的位置。如果P给1000，无人机就悬停在了99.9米的位置。</p>
@@ -968,24 +968,24 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <p>所以就要引入I，假设现在无人机飞到了99米，距离期望高度还有1m，但是无人机悬停了，不能往上再飞了，这个1m就叫做<strong>稳态误差</strong>。稳态误差一般就是用I弥补的。<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-9.png"
+                     data-src="https://pic.imgdb.cn/item/64ba729c1ddac507cc2a66b7.jpg"
                       alt="Alt text"
                 ><br>P设定完了就不变了，到达99米的时候，由P产生的升力只够维持无人机悬停了。积分I是根据以往的误差积累的，那么现在的误差是不变的，I就会一直线性增加，那么I加上P就产生一个新的升力，然后无人机就可以继续上升，理想情况下无人机就可以达到理想高度。</p>
 <p>那么现在达到目标高度了，误差等于0了，由P产生的升力也等于0了。<br>升力由积分项提供，积分不受当前状态的影响，只受以前所有误差的积累的影响。所以积分项不会因为现在的误差变成0而变了。他只是不再积累了。但是积分项不是0哦！所以此时悬停的工作就给了I。</p>
 <p>那现在来说D！如果P一开始是100，误差一开始也是100.那么一开始的升力就达到了10000，太大了。积分项从100一直积分下去也是挺大的。<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-10.png"
+                     data-src="https://pic.imgdb.cn/item/64ba73161ddac507cc2c2474.jpg"
                       alt="Alt text"
                 ><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-11.png"
+                     data-src="https://pic.imgdb.cn/item/64ba732b1ddac507cc2c6e7b.jpg"
                       alt="Alt text"
                 ><br>也就是P和I在一开始的时候会非常大。<br>无人机就会直接冲过100米，可能飞到150米然后再飞回来……<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-12.png"
+                     data-src="https://pic.imgdb.cn/item/64ba733b1ddac507cc2cdce1.jpg"
                       alt="Alt text"
                 ><br>比如这样子。</p>
 <p>所以就要引入微分。微分就是对误差进行求导。导数值就是微分项。一开始PI都是正的，导致E误差是在下降的，所以对误差求导得到的D就是负的，所以D就可以去抵消PI。</p>
@@ -1010,14 +1010,14 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <li>理论到实际<br>示例1：<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-13.png"
+                     data-src="https://pic.imgdb.cn/item/64ba73531ddac507cc2d33ea.jpg"
                       alt="Alt text"
                 ><br>控制器就是根据PID的那个公式算得的结果，然后根据CAN协议传给执行器，也就是电调。然后电调给对应的电机电流，然后电机的输出（可以是电机的转速）反馈回去再进行一次pid控制。</li>
 </ol>
 <p>代码讲解：<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-14.png"
+                     data-src="https://pic.imgdb.cn/item/64ba73601ddac507cc2d631a.jpg"
                       alt="Alt text"
                 ><br>首先还要定义一下我们的期望输出：</p>
 <ul>
@@ -1036,18 +1036,18 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-15.png"
+                     data-src="https://pic.imgdb.cn/item/64ba73721ddac507cc2da27d.jpg"
                       alt="Alt text"
                 ><br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-16.png"
+                     data-src="https://pic.imgdb.cn/item/64ba73801ddac507cc2dd4b6.jpg"
                       alt="Alt text"
                 ><br>P,I,D都算出来了，根据公式或者是流程图，得把他们加起来了。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-17.png"
+                     data-src="https://pic.imgdb.cn/item/64ba738e1ddac507cc2e09ae.jpg"
                       alt="Alt text"
                 ><br>所以这里就是在求和。</p>
 <ul>
@@ -1059,7 +1059,7 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-18.png"
+                     data-src="https://pic.imgdb.cn/item/64ba739e1ddac507cc2e440b.jpg"
                       alt="Alt text"
                 ><br>特别注意！代码只是演示。实际上使用，这两部分用一个就行了，如果两个都写进去就一次循环里面积分了两次！是错误的。</p>
 <p>如果既想要积分限幅又想要积分分离，那就把第三句的积分去掉，只留下积分分离里面的积分就好了。然后再把积分限幅放到积分分离的累加积分的那一句的下面就行了。</p>
@@ -1067,13 +1067,13 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 <p>示例2：<br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-19.png"
+                     data-src="https://pic.imgdb.cn/item/64ba73aa1ddac507cc2e6d8a.jpg"
                       alt="Alt text"
                 ><br><a class="link"   href="https://www.bilibili.com/video/BV1B54y1V7hp?t=855.8&p=5" >点我，看具体细节 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/image-20.png"
+                     data-src="https://pic.imgdb.cn/item/64ba73bf1ddac507cc2eb948.jpg"
                       alt="Alt text"
                 ></p>
 ]]></content>
@@ -1133,6 +1133,28 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
 ]]></content>
       <tags>
         <tag>C语言 指针的详解与应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>函数间接</title>
+    <url>/2023/07/21/%E5%87%BD%E6%95%B02-0/</url>
+    <content><![CDATA[<h1 id="函数进阶"><a href="#函数进阶" class="headerlink" title="函数进阶"></a>函数进阶</h1><h2 id="1-函数多返回值"><a href="#1-函数多返回值" class="headerlink" title="1.函数多返回值"></a>1.函数多返回值</h2><p>语法：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">def test_return():</span><br><span class="line">    return 1,2</span><br><span class="line"></span><br><span class="line">x,y = test_return()</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>与c语言不同。Python可以按照返回值的顺序，写对应顺序的多个变量接收即可。变量之间用逗号隔开。支持不同类型的数据return。</li>
+</ul>
+<h2 id="2-函数多种传参方式"><a href="#2-函数多种传参方式" class="headerlink" title="2. 函数多种传参方式"></a>2. 函数多种传参方式</h2><h3 id="2-1-位置参数"><a href="#2-1-位置参数" class="headerlink" title="2.1 位置参数"></a>2.1 位置参数</h3>]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>四元数</title>
+    <url>/2023/07/21/%E5%9B%9B%E5%85%83%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="四元数"><a href="#四元数" class="headerlink" title="四元数"></a>四元数</h1><p>作为做飞控的，想要控制好无人机的姿态，四元数是必须学习的。</p>
+]]></content>
+      <tags>
+        <tag>AC_fly飞控</tag>
       </tags>
   </entry>
 </search>
