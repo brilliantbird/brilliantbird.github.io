@@ -1136,14 +1136,103 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
       </tags>
   </entry>
   <entry>
-    <title>函数间接</title>
+    <title>函数进阶</title>
     <url>/2023/07/21/%E5%87%BD%E6%95%B02-0/</url>
     <content><![CDATA[<h1 id="函数进阶"><a href="#函数进阶" class="headerlink" title="函数进阶"></a>函数进阶</h1><h2 id="1-函数多返回值"><a href="#1-函数多返回值" class="headerlink" title="1.函数多返回值"></a>1.函数多返回值</h2><p>语法：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">def test_return():</span><br><span class="line">    return 1,2</span><br><span class="line"></span><br><span class="line">x,y = test_return()</span><br></pre></td></tr></table></figure></div>
 <ul>
 <li>与c语言不同。Python可以按照返回值的顺序，写对应顺序的多个变量接收即可。变量之间用逗号隔开。支持不同类型的数据return。</li>
 </ul>
-<h2 id="2-函数多种传参方式"><a href="#2-函数多种传参方式" class="headerlink" title="2. 函数多种传参方式"></a>2. 函数多种传参方式</h2><h3 id="2-1-位置参数"><a href="#2-1-位置参数" class="headerlink" title="2.1 位置参数"></a>2.1 位置参数</h3>]]></content>
+<h2 id="2-函数多种传参方式"><a href="#2-函数多种传参方式" class="headerlink" title="2. 函数多种传参方式"></a>2. 函数多种传参方式</h2><h3 id="2-1-位置参数"><a href="#2-1-位置参数" class="headerlink" title="2.1 位置参数"></a>2.1 位置参数</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba751d1ddac507cc33b7ce.jpg"
+                     
+                ><br>这个就是我们之前一直学的东西。</p>
+<h3 id="2-2-关键字参数"><a href="#2-2-关键字参数" class="headerlink" title="2.2 关键字参数"></a>2.2 关键字参数</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba75c01ddac507cc3602cd.jpg"
+                     
+                ></p>
+<p> 就是在传参的时候指定好形式参数的名字。</p>
+<ul>
+<li>混用的时候，如果位置参数放在后面，就会报错。</li>
+</ul>
+<h3 id="2-3-缺省参数"><a href="#2-3-缺省参数" class="headerlink" title="2.3 缺省参数"></a>2.3 缺省参数</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba77821ddac507cc3c1f31.jpg"
+                     
+                ></p>
+<p>就是相当于默认参数</p>
+<ul>
+<li>默认参数必须放在最后，放在前面会报错。</li>
+</ul>
+<h3 id="2-4-不定长参数"><a href="#2-4-不定长参数" class="headerlink" title="2.4 不定长参数"></a>2.4 不定长参数</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba78021ddac507cc3dc166.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba78461ddac507cc3ea8fe.jpg"
+                     
+                ></p>
+<ul>
+<li>位置参数的不定长，就是说参数的个数可以是任意的。</li>
+<li>参数那边必须加一个*号标志一下。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba79031ddac507cc415611.jpg"
+                     
+                ></p>
+<ul>
+<li>关键字传递的不定长要两个*号。</li>
+<li>出入的参数的书写格式必须是键值对</li>
+<li>传递进去的参数就会作为一个字典存在。相当于**kwaargs就是一个字典对象了。（kwargs也就是 key - words）</li>
+</ul>
+<h2 id="2-3-函数作为参数传递"><a href="#2-3-函数作为参数传递" class="headerlink" title="2.3 函数作为参数传递"></a>2.3 函数作为参数传递</h2><p>之前的参数都是数据。</p>
+<p>现在就是把函数本身作为一个参数传入另外一个函数。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba7b7e1ddac507cc494e16.jpg"
+                     
+                ></p>
+<ul>
+<li><p>这其实是计算逻辑的传递，而不是数据的传递。任何逻辑都可以自行定义并且作为函数传入。函数作为参数传入的本质是传入这个函数的代码逻辑。</p>
+</li>
+<li><p>普通的数据传入是，逻辑已经确定了，只是数据不确定。函数作为数据传入，它指的是计算的数据已经确定，但是计算数据的逻辑是不确定的。</p>
+</li>
+<li><p>函数传入的作用：1. 传入计算逻辑，而非传入数据。<br><strong>- 个人总结：这里和以前学过的在一个函数中调用另外一个函数是不一样的！！！！因为函数作为参数了，你传入不同的函数进去，数据已经定死了，但是执行的逻辑就变了。记住这里的compute是你传入的函数的别名，传入不同的函数，compute就不同！！</strong></p>
+</li>
+</ul>
+<h2 id="2-4-lambda匿名函数"><a href="#2-4-lambda匿名函数" class="headerlink" title="2.4 lambda匿名函数"></a>2.4 lambda匿名函数</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba7f791ddac507cc57089b.jpg"
+                     
+                ></p>
+<ul>
+<li>函数体只能写一行！！不能写多行</li>
+<li>lambda是不写return语句的，默认是直接return的。</li>
+</ul>
+<p>示例：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64ba80c91ddac507cc5c1fec.jpg"
+                     
+                ></p>
+<ul>
+<li>匿名函数不能重复使用，有什么用呢？只是如果你的函数的代码只有一行，这时候，为了简单，就不用再去重新定义一个函数了。（真实应用中还是很常用的）</li>
+</ul>
+]]></content>
       <tags>
         <tag>Python</tag>
       </tags>
