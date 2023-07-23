@@ -1246,4 +1246,97 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
         <tag>AC_fly飞控</tag>
       </tags>
   </entry>
+  <entry>
+    <title>文件操作</title>
+    <url>/2023/07/22/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h1 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h1><h2 id="1-文件的编码"><a href="#1-文件的编码" class="headerlink" title="1. 文件的编码"></a>1. 文件的编码</h2><ul>
+<li>计算机只认识0和1。我们使用编码技术（密码本）将内容翻译成0和1存入。</li>
+</ul>
+<p><strong>编码技术就是：翻译的规则。记录了如何将内容翻译成二进制，以及如何将二进制翻译回可识别内容。</strong></p>
+<ul>
+<li><p>计算机有许多可用编码：<strong>UTF-8</strong>、GBK、Big5等等。（UTF-8是现在全球通用的。）</p>
+</li>
+<li><p>记录文件的时候用的是什么编码，打开文件的时候也要用同样的编码去打开。</p>
+</li>
+</ul>
+<h2 id="2-文件操作"><a href="#2-文件操作" class="headerlink" title="2. 文件操作"></a>2. 文件操作</h2><p>内存中存放的数据在计算机关闭之后就会消失，要长久保存数据，就要使用硬盘，光盘，U盘等设备，为了便于管理和检索，就引入了“<strong>文件</strong>”的概念</p>
+<p>操作系统以文件为单位管理磁盘中的数据。</p>
+<ul>
+<li>文件操作主要包括：<strong>打开，读写，关闭。</strong></li>
+</ul>
+<h3 id="2-1打开文件"><a href="#2-1打开文件" class="headerlink" title="2.1打开文件"></a>2.1打开文件</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bb43d11ddac507cc64e679.jpg"
+                     
+                ><br>encoding的位置顺序不是第三位。所以如果不使用关键字参数，最后值不会传给encoding。</p>
+<p>最后得到的f是对文本文件进行操作的一个对象<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bb44611ddac507cc6707a4.jpg"
+                     
+                ></p>
+<h3 id="2-2-读操作相关方法"><a href="#2-2-读操作相关方法" class="headerlink" title="2.2 读操作相关方法"></a>2.2 读操作相关方法</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bb456e1ddac507cc6aa856.jpg"
+                     
+                ></p>
+<ul>
+<li><p>单位是字节，如果文件里面的数据是中文。读取10个字节，结果就是得到的10个中文。所以一个中文占1个字节吗？我记得c语言课上老师说，一个中文占的是2个字节？</p>
+</li>
+<li><p>如果连续调用两次read函数的话，第一次read读取的结尾，程序集会记录当前已经读到这里了。所以下一次调用的时候，从上一次读的结尾继续往下面读。（并且read和readlines是同理的，readlines也会接着从上一个read函数读取到的文件的结尾继续往下读。）</p>
+</li>
+<li><p>readlines函数的返回值是一个列表。</p>
+</li>
+<li><p>还有一个readline方法：一次只读取一行内容。</p>
+</li>
+<li><p>其实吧，read函数就是把文件的内容拿出来，然后我们可以对这些内容进行操作。</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bb48451ddac507cc74c49b.jpg"
+                     
+                ></p>
+<h3 id="2-3-关闭文件"><a href="#2-3-关闭文件" class="headerlink" title="2.3 关闭文件"></a>2.3 关闭文件</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bb489a1ddac507cc75e4bd.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bb49731ddac507cc7890af.jpg"
+                     
+                ></p>
+<ul>
+<li>在那个冒号后面的一大堆语句执行完以后文件就会被自动关闭了。</li>
+</ul>
+<h3 id="2-4-文件的写入"><a href="#2-4-文件的写入" class="headerlink" title="2.4 文件的写入"></a>2.4 文件的写入</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bba4001ddac507ccae4939.jpg"
+                     
+                ></p>
+<ul>
+<li>如果是写入模式（w模式）的话，文件不存在，会自动帮你创建一个文件。如果文件存在的话，用这个模式会把文件里面的<strong>内容全部清空</strong>，然后写我们想写的东西。</li>
+<li>close方法是内置flush方法的。</li>
+</ul>
+<h3 id="2-5-文件的追加"><a href="#2-5-文件的追加" class="headerlink" title="2.5 文件的追加"></a>2.5 文件的追加</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bc9e3c1ddac507cc59dfea.jpg"
+                     
+                ></p>
+<ul>
+<li>需要换行就用\n</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
