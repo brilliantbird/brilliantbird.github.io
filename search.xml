@@ -1339,4 +1339,198 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
         <tag>Python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>异常</title>
+    <url>/2023/07/23/%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h2 id="1-了解异常"><a href="#1-了解异常" class="headerlink" title="1.了解异常"></a>1.了解异常</h2><p>异常：当检测到一个错误的时候，Python解释器就无法继续执行了，反而会出现一些错误的提示，这就是所谓的“异常”，也就是我们说的bug。</p>
+<h2 id="2-异常的捕获方法"><a href="#2-异常的捕获方法" class="headerlink" title="2. 异常的捕获方法"></a>2. 异常的捕获方法</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bcc46d1ddac507ccbdfdd0.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bcc4bf1ddac507ccbeeefc.jpg"
+                     
+                ></p>
+<h3 id="2-1捕获常规异常"><a href="#2-1捕获常规异常" class="headerlink" title="2.1捕获常规异常"></a>2.1捕获常规异常</h3><ol>
+<li><p>基本语法：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    可能发生错误的代码</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    如果出现异常执行的代码</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>进阶语法：捕获指定异常</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line"><span class="keyword">except</span> NameError <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;name变量名称为定义错误&#x27;</span>)</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<ul>
+<li>异常的类型是各种各样的。如果尝试执行的代码的异常类型和要捕获的异常类型不一致，则无法捕获异常。</li>
+<li>一般try下方只放一行尝试执行的代码。</li>
+<li>这里的e是别名。</li>
+</ul>
+<ol start="3">
+<li>进阶语法：捕获多个异常<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">1</span>/<span class="number">0</span>)</span><br><span class="line"><span class="keyword">except</span>(NameError,ZeroDivisionError) <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;出现变量为定义或者除以0异常错误...&#x27;</span>)</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<ul>
+<li>当捕获多个异常的时候，可以把要捕获的异常类型的名字，放到except后，并且使用元组的方式进行书写。</li>
+</ul>
+<ol start="4">
+<li>捕获所有异常</li>
+</ol>
+<ul>
+<li>其实第一种基本语法就是捕获所有异常了。但是还有一种写法，表示所有异常类型。</li>
+</ul>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;name&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;出现异常了&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>以后一般用这种方式，因为Exception其实是顶级的异常。</li>
+</ul>
+<h3 id="2-2-异常的else和finally"><a href="#2-2-异常的else和finally" class="headerlink" title="2.2 异常的else和finally"></a>2.2 异常的else和finally</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bcc9c41ddac507cccdea48.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bcc9ed1ddac507ccce6454.jpg"
+                     
+                ></p>
+<ul>
+<li>finally一般用于资源的关闭</li>
+<li>else和finally是可选的，可写可不写。</li>
+</ul>
+<h2 id="3-异常的传递"><a href="#3-异常的传递" class="headerlink" title="3. 异常的传递"></a>3. 异常的传递</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bccaeb1ddac507ccd13ae6.jpg"
+                     
+                ></p>
+<ul>
+<li>异常的传递性告诉我们，如果想要捕获异常的话，并不需要深入到它真正出现异常的那一句话，只要函数之间有调用关系，也就是层级关系，在最顶级的调用这里，依旧可以捕获异常。</li>
+</ul>
+<h2 id="4-模块"><a href="#4-模块" class="headerlink" title="4. 模块"></a>4. 模块</h2><h3 id="4-1-Python自带模块"><a href="#4-1-Python自带模块" class="headerlink" title="4.1 Python自带模块"></a>4.1 Python自带模块</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce2821ddac507cc118d0c.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce2b41ddac507cc1213fd.jpg"
+                     
+                ></p>
+<ul>
+<li>中括号在Python里面是可选项，也就是可写可不写。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce3021ddac507cc12de58.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce3a61ddac507cc147a39.jpg"
+                     
+                ></p>
+<ul>
+<li>用这种方法就只会针对这个模块里面的某一个功能使用。</li>
+<li>*号代表的是所有的意思。这样子用的时候就不用写time.sleep(5)了，就直接写sleep(5)就行了</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce4f31ddac507cc17b84b.jpg"
+                     
+                ></p>
+<ul>
+<li><p>就是给具体的模块和具体的功能改名而已。</p>
+</li>
+<li><p>模块的导入一般写在开头。</p>
+</li>
+</ul>
+<h3 id="4-2-自定义模块"><a href="#4-2-自定义模块" class="headerlink" title="4.2 自定义模块"></a>4.2 自定义模块</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce5b41ddac507cc19b0b7.jpg"
+                     
+                ></p>
+<ul>
+<li>就是只需要创建一个Python文件，在里面写好函数，然后要调用的时候import这个文件，就可以直接调用这个文件里面的函数了。</li>
+</ul>
+<p> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce6ec1ddac507cc1d102a.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce7cc1ddac507cc1f6e7b.jpg"
+                     
+                ></p>
+<ul>
+<li>就是说自定义的模块，本身也是一个py文件，然后我们测试的时候，直接在这个模块里面调用这些函数。但是在其他的py文件如果import这个模块的话，相当于c语言的include了，就是等价于直接把模块的所有内容复制粘贴过来了。这样子测试的时候调用函数，现在也会被执行了。所以Python有一个内置变量__name__，如果你在模块内运行的话，这个变量就等于__main__,如果你在其他文件运行的话，就不等于，这样子测试的函数就不会被执行了，但是我们测试的时候它仍然还是会被执行。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bce9f11ddac507cc25374c.jpg"
+                     
+                ></p>
+<ul>
+<li>最终能import到哪些函数取决于__all__变量。</li>
+<li>如果你手动导入，也就是用from的话，那也可以，那就不受__all__的影响了。</li>
+</ul>
+<h2 id="5-自定义Python包"><a href="#5-自定义Python包" class="headerlink" title="5. 自定义Python包"></a>5. 自定义Python包</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bd17771ddac507cc9b3b3c.jpg"
+                     
+                ></p>
+<ul>
+<li>就是说模块 + <strong>init</strong>.py就等于一个Python的包。</li>
+<li><strong>init</strong>.py是一个特殊的文件，只要这个文件存在于文件夹里面，那么这个就是一个Python的包。否则只是一个普通的文件夹。</li>
+</ul>
+<p>创建Python包：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bd28db1ddac507ccced2f2.jpg"
+                     
+                ></p>
+<ul>
+<li>导入包以后，还有继续选择要导入哪个文件。<strong>包名.文件名</strong></li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bd2b1f1ddac507ccd7409f.jpg"
+                     
+                ></p>
+<h2 id="6-安装第三方包"><a href="#6-安装第三方包" class="headerlink" title="6. 安装第三方包"></a>6. 安装第三方包</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bd2c061ddac507ccdabe0d.jpg"
+                     
+                ></p>
+<p>安装第三方包：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bd2c6d1ddac507ccdc1d15.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bd2cb11ddac507ccdd021f.jpg"
+                     
+                ></p>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
