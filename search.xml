@@ -1533,4 +1533,177 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
         <tag>Python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>可视化图表的开发</title>
+    <url>/2023/07/24/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9B%BE%E8%A1%A8%E7%9A%84%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<h1 id="可视化图表的开发"><a href="#可视化图表的开发" class="headerlink" title="可视化图表的开发"></a>可视化图表的开发</h1><h2 id="1-json"><a href="#1-json" class="headerlink" title="1. json"></a>1. json</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be1c051ddac507ccd41788.jpg"
+                     
+                ></p>
+<p>Python有自己的数据格式，比如字典，列表，c语言，Java<br>也有自己的数据格式。想要相互传递数据，就用json。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be1c811ddac507ccd5a3ce.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be1cc71ddac507ccd67847.jpg"
+                     
+                ></p>
+<ul>
+<li>json的格式要么是<strong>字典</strong>，要么是一个<strong>列表里面嵌套的字典</strong>。所以Python和json格式是无缝衔接的。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be1dc51ddac507ccd956d4.jpg"
+                     
+                ></p>
+<ul>
+<li><p>时刻记住json本质上是一个字符串，所以输出json的格式就是str。</p>
+</li>
+<li><p>用loads方法可以将json格式的数据转换成列表或者字典类型的数据，具体转换成1哪种格式取决于你的json数据。</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be1fae1ddac507ccdea501.jpg"
+                     
+                ></p>
+<h2 id="2-pyecharts模块"><a href="#2-pyecharts模块" class="headerlink" title="2. pyecharts模块"></a>2. pyecharts模块</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be1fdf1ddac507ccdf31e7.jpg"
+                     
+                ></p>
+<ul>
+<li><p>可以去官网看看<a class="link"   href="https://pyecharts.org/#/en-us/" >pyecharts的官网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>还有官方画廊： <a class="link"   href="https://gallery.pyecharts.org/#/README" >官方画廊 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>      里面有官方示例</p>
+</li>
+</ul>
+<p>pyecharts模块的安装：</p>
+<ul>
+<li>打开命令行</li>
+<li>输入pip install pyecharts</li>
+</ul>
+<h2 id="3-折线图"><a href="#3-折线图" class="headerlink" title="3. 折线图"></a>3. 折线图</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be227b1ddac507cce744b1.jpg"
+                     
+                ></p>
+<p>代码：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Line</span><br><span class="line">line = Line()</span><br><span class="line">line.add_xaxis([<span class="string">&quot;中国&quot;</span>,<span class="string">&quot;美国&quot;</span>,<span class="string">&quot;英国&quot;</span>])</span><br><span class="line">line.add_yaxis(<span class="string">&quot;GDP&quot;</span>,[<span class="number">30</span>,<span class="number">20</span>,<span class="number">10</span>])</span><br><span class="line">line.render()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>运行后会生成一个heml的文件，用浏览器打开以后就得到折线图了。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be26111ddac507ccf32ec4.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be26451ddac507ccf3d62c.jpg"
+                     
+                ></p>
+<ul>
+<li>据此继续优化代码：</li>
+</ul>
+<div class="highlight-container" data-rel="Py"><figure class="iseeu highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Line</span><br><span class="line"><span class="keyword">from</span> pyecharts.options <span class="keyword">import</span> TitleOpts,LegendOpts,ToolboxOpts,VisualMapOpts</span><br><span class="line">line = Line()</span><br><span class="line">line.add_xaxis([<span class="string">&quot;中国&quot;</span>,<span class="string">&quot;美国&quot;</span>,<span class="string">&quot;英国&quot;</span>])</span><br><span class="line">line.add_yaxis(<span class="string">&quot;GDP&quot;</span>,[<span class="number">30</span>,<span class="number">20</span>,<span class="number">10</span>])</span><br><span class="line">line.set_global_opts(</span><br><span class="line">    title_opts=TitleOpts(title=<span class="string">&quot;GDP展示&quot;</span>,pos_left=<span class="string">&quot;center&quot;</span>,pos_bottom=<span class="string">&quot;1%&quot;</span>),</span><br><span class="line">    legend_opts=LegendOpts(is_show=<span class="literal">True</span>),</span><br><span class="line">    toolbox_opts=ToolboxOpts(is_show=<span class="literal">True</span>),</span><br><span class="line">    visualmap_opts=VisualMapOpts(is_show=<span class="literal">True</span>)</span><br><span class="line">)</span><br><span class="line">line.render()</span><br></pre></td></tr></table></figure></div>
+
+<p>效果：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be39b91ddac507cc3216a8.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64be39231ddac507cc302243.jpg"
+                     
+                ></p>
+<ul>
+<li>更多的全局配置项可以去官网看文档。</li>
+</ul>
+<h2 id="4-数据处理"><a href="#4-数据处理" class="headerlink" title="4. 数据处理"></a>4. 数据处理</h2><ul>
+<li>查看json格式的工具：<a class="link"   href="http://www.ab173.com/" >懒人工具 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，是一个网址，最上面一排有一个：JSON相关。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bf35091ddac507cc52b87c.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bf35861ddac507cc537194.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bf35b61ddac507cc53c802.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bf3f091ddac507cc649e2a.jpg"
+                     
+                ></p>
+<h2 id="5-创建折线图"><a href="#5-创建折线图" class="headerlink" title="5. 创建折线图"></a>5. 创建折线图</h2><p>重复上述操作，分别得到美国，日本，印度三个国家的json数据转字典。也就是完成数据处理部分。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bfcaaa1ddac507cc585091.jpg"
+                     
+                ></p>
+<ul>
+<li>因为x轴是共用的，所以x轴数据只需要添加一次就行了。</li>
+</ul>
+<p>效果图：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bfcacc1ddac507cc588804.jpg"
+                     
+                ></p>
+<p>设置全局选项：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64bfcbe01ddac507cc5a51a0.jpg"
+                     
+                ></p>
+<ul>
+<li><p>可以看到，图里面的y轴数据都显示出来了。这样子很乱，可以设置一下，隐藏起来。就是直接在y轴数据的后面继续配置参数。（记得导入相应的功能）</p>
+</li>
+<li><p>总结：</p>
+</li>
+</ul>
+<ol>
+<li>用open函数读取数据。</li>
+<li>删去文件开头和结尾中不符合json格式的语句。</li>
+<li>调用json里面的loads方法将json文件转为字典。</li>
+<li>用json工具查看json文件的嵌套结构，通过结构获取数据。</li>
+<li>生成图表，添加x，y轴数据。并且隐藏y轴的数据，让其不显示。</li>
+<li>配置全局选项。</li>
+<li>调用render生成图表</li>
+<li>关闭文件对象。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
