@@ -1706,4 +1706,38 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
         <tag>Python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机的发展和基本组成</title>
+    <url>/2023/07/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c217b51ddac507cce4e9be.jpg"
+                     
+                ><br>计算机组成原理就是研究硬件之间的关系的。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c2189e1ddac507cce77f07.jpg"
+                     
+                ></p>
+<ul>
+<li>计算机内部传递0,1数据本质上就是用这种高低电平。</li>
+<li>CPU或者是内存条上面的引脚，就是用来接收高低电平的。</li>
+</ul>
+<p><strong>计算机系统 &#x3D; 硬件 + 软件</strong>（软件又可以分为系统软件和应用软件。）</p>
+<ul>
+<li>机器字长：计算机一次整数运算所能处理的二进制位数。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c21cc91ddac507ccf071bc.jpg"
+                     
+                ></p>
+]]></content>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
