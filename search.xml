@@ -1740,4 +1740,144 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>硬件</title>
+    <url>/2023/07/27/%E7%A1%AC%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><h2 id="1-硬件的整体介绍"><a href="#1-硬件的整体介绍" class="headerlink" title="1. 硬件的整体介绍"></a>1. 硬件的整体介绍</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c21f451ddac507ccf4e29c.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c21fd31ddac507ccf5e154.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c220331ddac507ccf699a7.jpg"
+                     
+                ><br>缺点：数据输入进来，本来应该要直接放到存储器里面，但是会先放到运算器再放到存储器。同理输出设备本来应该直接从存储器里面拿东西，但是还是要先给运算器，从运算器里面把东西拿出去。</p>
+<p>现代计算机结构就是改变这个缺点：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c2212a1ddac507ccf850d6.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c221ae1ddac507ccf93d22.jpg"
+                     
+                ></p>
+<ul>
+<li>这里的主机和现实生活中的放在机箱里面的那些主机不同。</li>
+<li>主存是主存储器，辅存是硬盘。比如手机的运行内存就是主存。所有下载的APP是放在辅存里面的。只有运行的时候才会把APP的代码数据读取到主存里面去。所以辅存要看做是IO设备。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c335d71ddac507ccb5aabf.jpg"
+                     
+                ></p>
+<h2 id="2-各个硬件的工作原理"><a href="#2-各个硬件的工作原理" class="headerlink" title="2. 各个硬件的工作原理"></a>2. 各个硬件的工作原理</h2><h3 id="2-1-主存储器"><a href="#2-1-主存储器" class="headerlink" title="2.1 主存储器"></a>2.1 主存储器</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c336b01ddac507ccb7147c.jpg"
+                     
+                ></p>
+<ul>
+<li><p>存储体用来存储数据。</p>
+</li>
+<li><p>CPU会把想要存放的数据的地址写入MAR里面，主存储器就可以根据MAR里面的地址，从存储体里面拿出CPU想要的数据。</p>
+</li>
+<li><p>拿出来的数据，写入MDR里面，然后CPU从MDR里面取走数据。</p>
+</li>
+<li><p>CPU也可以写入数据，写入的数据先放到MDR里面，然后通过控制总线告诉主存储器，这次是写操作。然后主存储器就会根据对应的信息进行写操作了。</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c339631ddac507ccbb3ce0.jpg"
+                     
+                ></p>
+<ul>
+<li>存储字长一般是8的倍数。</li>
+<li>字和字节不一样，一个字节是8个比特。但是一个字的大小取决于计算机硬件的设计，可以是8,16,32,64都有可能。</li>
+<li>描述字节用B，描述比特用b。比如办宽带，100Mbps是说每秒100Mb,是比特！而用迅雷下载的时候的10MBps，是B，所以并不是运营商骗了你，实际上要100&#x2F;8才是你实际获得的MBps。</li>
+</ul>
+<h3 id="2-2-运算器"><a href="#2-2-运算器" class="headerlink" title="2.2 运算器"></a>2.2 运算器</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c33b011ddac507ccbde33e.jpg"
+                     
+                ></p>
+<ul>
+<li>ALU是核心。成本也最高。</li>
+</ul>
+<h3 id="2-3-控制器"><a href="#2-3-控制器" class="headerlink" title="2.3 控制器"></a>2.3 控制器</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c33b801ddac507ccbed270.jpg"
+                     
+                ></p>
+<ul>
+<li>CU是核心。</li>
+</ul>
+<h3 id="3-计算机的工作过程"><a href="#3-计算机的工作过程" class="headerlink" title="3. 计算机的工作过程"></a>3. 计算机的工作过程</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c33c1e1ddac507ccbfde3e.jpg"
+                     
+                ></p>
+<ul>
+<li>执行指令的时候，CPU会把指令拆解为操作码和地址码。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c33daa1ddac507ccc29289.jpg"
+                     
+                ></p>
+<ul>
+<li><p>括号指的是这个寄存器里面的内容。比如(MAR)指的是MAR寄存器里面的内容。</p>
+</li>
+<li><p>M指的是主存储器。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c33e321ddac507ccc3662e.jpg"
+                     
+                ></p>
+</li>
+<li><p>指令和数据以同等的地位存于存储器，可以按地址寻访。<strong>指令由操作码和地址码组成。</strong></p>
+</li>
+<li><p>后面俩步我就省略了。</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c33f7f1ddac507ccc5c42b.jpg"
+                     
+                ></p>
+<ul>
+<li><p>取指令和分析指令的操作都是一样的。只有分析完指令以后，接下来的操作才可能不一样。</p>
+</li>
+<li><p>取指令的时候，MDR的数据肯定是要传给IR的，而在执行指令的阶段，CU会根据指令的不同去决定MDR的数据内容是放在ACC还是MQ还是X，</p>
+</li>
+<li><p>所以根据指令执行周期的不同，在不同的阶段，CPU就可以区分出这次从MDR取出来的是数据还是指令。</p>
+</li>
+<li><p>在程序运行之前，指令和数据都会被提前存储到主存储器里面。</p>
+</li>
+<li><p>补充：现在的计算机通常把MAR、MDR集成到CPU里面。</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
