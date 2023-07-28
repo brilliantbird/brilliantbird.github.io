@@ -1976,4 +1976,64 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>操作系统的概念、功能</title>
+    <url>/2023/07/28/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5%E3%80%81%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c37c371ddac507cc3aca37.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c37ca31ddac507cc3b7e35.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c37d981ddac507cc3d2a1b.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c37de21ddac507cc3db2cf.jpg"
+                     
+                ></p>
+<ul>
+<li>操作系统会向上层提供GUI：图形化用户接口。让用户可以使用形象的图像界面进行操作，而不需要使用命令行。</li>
+</ul>
+<p>命令行又分为俩种：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c37ed21ddac507cc3f6fe2.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c3b7571ddac507cca67616.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c3b7be1ddac507cca726a3.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c3b7f01ddac507cca77e25.jpg"
+                     
+                ></p>
+]]></content>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
 </search>
