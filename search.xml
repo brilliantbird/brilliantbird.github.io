@@ -1909,4 +1909,71 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
         <tag>计算机组成原理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机的性能指标</title>
+    <url>/2023/07/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c370991ddac507cc233a1c.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c371181ddac507cc248e11.jpg"
+                     
+                ></p>
+<ul>
+<li>1KB就等于1024B。因为2的10次方是1024</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c372921ddac507cc2760d0.jpg"
+                     
+                ></p>
+<ul>
+<li><p>主频就是CPU控制其他硬件的节奏频率。主频不是一定越高越好，还要取决于其他因素。比如CPI。就是说同样执行一个乘法指令，不同CPU的完成方式不一样，导致完成一个指令的周期也不一样。</p>
+</li>
+<li><p>执行整个程序的耗时也叫做CPU的执行时间。</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c373681ddac507cc28f4dc.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c373e91ddac507cc29e2ca.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c374081ddac507cc2a239d.jpg"
+                     
+                ></p>
+<ul>
+<li>描述频率的时候G就是10的9次方，而是2的9次方了。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c3748e1ddac507cc2b2687.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c374b21ddac507cc2b6f06.jpg"
+                     
+                ></p>
+]]></content>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
