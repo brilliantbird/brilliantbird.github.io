@@ -2036,4 +2036,130 @@ reverse默认是false,如果想要想要排序进行反转，那就第二个参�
         <tag>操作系统</tag>
       </tags>
   </entry>
+  <entry>
+    <title>存储系统</title>
+    <url>/2023/07/28/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h1 id="存储系统"><a href="#存储系统" class="headerlink" title="存储系统"></a>存储系统</h1><h2 id="1-存储系统基本概念"><a href="#1-存储系统基本概念" class="headerlink" title="1. 存储系统基本概念"></a>1. 存储系统基本概念</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c3ba6c1ddac507ccac03fd.jpg"
+                     
+                ></p>
+<ul>
+<li>应用APP都是在辅存里面的，但是辅存的读写速度太慢了。CPU如果直接和辅存去读写数据，会拖累CPU的速度。</li>
+<li>所以调用应用的时候会先把程序从辅存掉到主存里面去。</li>
+<li>为什么还要增加一个Cache？因为主存的速度还是比CPU慢，所以增加一个Cache缓解CPU和主存之间的速度矛盾。</li>
+<li>最上面的寄存器，速度最快，也最少，在CPU里面也就只有几个寄存器。</li>
+</ul>
+<h2 id="2-存储器的分类"><a href="#2-存储器的分类" class="headerlink" title="2. 存储器的分类"></a>2. 存储器的分类</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c4867e1ddac507ccd0d4b0.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c486bf1ddac507ccd13103.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c487501ddac507ccd1f81e.jpg"
+                     
+                ></p>
+<ul>
+<li><p>顺序存取存储器和直接存取存储器又可以叫做串行访问存储器（读写某个存储单元所需时间和存储单元的物理位置有关。）</p>
+</li>
+<li><p>这三种存储器都是需要我们先指明一个地址，然后去读取数据。还有一种存储器叫相联存储器（CAM），也就是可以直接按照内容访问的存储器。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c488501ddac507ccd36700.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c489011ddac507ccd47dee.jpg"
+                     
+                ></p>
+</li>
+<li><p>主存是断电丢失存储信息的。你看手机关机以后，本来在主存里面的操作系统等存储信息都没了。重新开机的时候开机动画那么长就是在把操作系统从辅存调到主存。</p>
+</li>
+<li><p>根据不同的分类方式，可以有很多种分类方法。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c489981ddac507ccd55508.jpg"
+                     
+                ></p>
+</li>
+</ul>
+<h2 id="3-主存储器"><a href="#3-主存储器" class="headerlink" title="3. 主存储器"></a>3. 主存储器</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c48b9d1ddac507ccd851b9.jpg"
+                     
+                ></p>
+<p>怎么根据地址找到我们想要读写的存储单元呢？</p>
+<ul>
+<li>使用译码器：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c48da11ddac507ccdb9565.jpg"
+                     
+                ><br>经过译码器的处理，一个地址信号会被转换成译码器的某一条字选线的高电平输出。</li>
+<li>然后通过绿色的那条数据线（位线），把每一位的二进制信息传入MDR的寄存器里面，CPU再通过数据总线从MDR里面取走这一个字长的数据信息。</li>
+</ul>
+<h2 id="4-SRAM和DRAM"><a href="#4-SRAM和DRAM" class="headerlink" title="4. SRAM和DRAM"></a>4. SRAM和DRAM</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c52b541ddac507cc061c6c.jpg"
+                     
+                ></p>
+<ul>
+<li>DRAM芯片的结构就是上面第三节的那个结构。</li>
+<li>DRAM芯片：使用栅极电容存储信息。</li>
+<li>SRAM芯片：使用双稳态触发器存储信息。</li>
+<li>俩种芯片的核心区别就是存储元不一样。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c52ccd1ddac507cc0c2355.jpg"
+                     
+                ></p>
+<ul>
+<li><p>左边的成本低，集成度高，功耗也低，右边反之。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c52d3f1ddac507cc0cf001.jpg"
+                     
+                ></p>
+</li>
+<li><p>因为DRAM读出数据以后要重写，所以速度更慢。</p>
+</li>
+<li><p>这两种芯片都属易失性芯片，也就是断电以后信息会丢失。</p>
+</li>
+<li><p>“刷新”：因为电容里面的电荷会随着时间慢慢流失，这就会导致里面存储的二进制信息出现误差。实际上电容内的电荷只能维持2ms，即使不断电，2ms以后信息也会消失。所以2ms内必须“刷新”一次，给电容充电。而双稳态触发器只要一直供电就不好改变触发器的状态。</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c5309c1ddac507cc1326b0.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c5311c1ddac507cc141f7f.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/64c531661ddac507cc14b6d7.jpg"
+                     
+                ></p>
+]]></content>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
 </search>
